@@ -1,0 +1,6 @@
+user ---> username/password --> POST create party (createdBy(xUserID)) [name, date, time, attendees[],]  
+        to GET all parties created getbyUserID 
+        update  [name, date, time, attendees[],]
+        delete  (createdById) [name, date, time, attendees[],]
+user ---> 
+user --->

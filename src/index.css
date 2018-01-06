@@ -1,5 +1,60 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif;  
+  margin-top: 75px;
+}
+
+.navigation {
+  overflow: hidden;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  width: 110%;
+  left: -5px;
+  height: 50px;
+  margin-bottom: 55px;
+}
+
+.menu-items li {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 30px;
+}
+
+.heading-text {
+  text-align: center;
+  margin-top: 55px;
+}
+
+.party-box{
+  width: 300px;
+  height: 250px;
+  border: solid black 3px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 15px; 
+}
+
+.small-box{
+  width: 200px;
+  height: 60px;
+  border: 2px solid black;
+
+}
+.more{
+  font-size: 34pt;
+  float: right;
+  margin-top: -44px;
+  padding-right: 10px;
+}
+
+h1{
+  padding-top: 15px;
+  text-align: center;
+  margin: 15px;
 }
