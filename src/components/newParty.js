@@ -1,6 +1,12 @@
 import React from 'react';
 import {Route, Link, Switch} from 'react-router-dom'; 
 import {questionsList} from './dummy-data';
+import Date from './date';
+import Moment from 'react-moment';
+import Theme from './theme';
+import Type from './type';
+import Menu from './menu';
+
 class NewParty extends React.Component {
     constructor(props) {
         super(props);
@@ -38,27 +44,27 @@ class NewParty extends React.Component {
 
 //use functional components when we dont have any internal state OR when we aren't working with lifecycle methods (didMount, willunmount etc)
 const Questions = (props) => {
-  return (
+	return (
     <div className="party-box">
 		<form onSubmit={this.handleSubmit}>
-				<Route path="/new-party/question"  render={props =>                     
-								<div> 
-										<br />
-										<input type="submit" value="Submit" />
-										<Link to={`/new-party/question-1`}>Next</Link>
-								</div>}/>
-								
-								{questionsList.map((question, index)=> {
-								if (props.number === index) {
-										return (<div>   
-												<Question index={index} question={question}/>
-												<br />
+			<Route path="/new-party/question"  render={props =>                     
+							<div> 
+									<br />
+									{/* <input type="submit" value="Submit" /> */}
+									<Link to={`/new-party/question-1`}>Next</Link>
+							</div>}/>
+							
+				{questionsList.map((question, index)=> {
+				if (props.number === index) {
+						return (<div>   
+								<Question index={index} question={question}/>
+								<br />
 
-												{props.number< questionsList.length - 1? <button onClick={props.handleButtonClick}> Next </button>: ""}
-										</div>)
-										}}
-								)
-						}
+									{props.number< questionsList.length - 1? <button onClick={props.handleButtonClick}> Next </button>: ""}
+							</div>)
+							}}
+					)
+			}
     </form>
     </div>
   );
@@ -67,51 +73,54 @@ const Questions = (props) => {
 const Question = (props) => {
 	return (
 		<div>
-				<label>
-						{props.question.title}:
-						{props.index === 2? <div><List /></div>: <input type="text"  onChange={this.onChange} />}
-						
-				</label>
+			<label>
+				{props.question.title}:
+				{props.index === 1? <div><Date /></div>: " "} 
+				{props.index === 2? <div><List /></div>: <input type="text"  onChange={this.onChange} />}
+				{props.index === 3? <div><Theme /></div>: " "} 
+				{props.index === 4? <div><Type /></div>: " "} 
+				{props.index === 5? <div><Menu /></div>: " "} 
+			</label>
 		</div>
 	)
 }
 
 class List extends React.Component {
 	constructor(props){
-			super(props);
-					this.state = {
-							guests: [],
-							guest: ""
-					}
+		super(props);
+			this.state = {
+				guests: [],
+				guest: ""
+			}
 	}   
  
 	onChange = (e) => {
-			e.preventDefault();
-			this.setState({
-					guest: e.target.value,
-			});
+		e.preventDefault();
+		this.setState({
+				guest: e.target.value,
+		});
 	}
 	onSubmit = (e) => {
-			e.preventDefault();
-			if(this.state.guest){
-					const guests = this.state.guests;
+		e.preventDefault();
+		if(this.state.guest){
+				const guests = this.state.guests;
 				guests.push(this.state.guest);
-					this.setState({
-							guests,
-					})
-			}
+				this.setState({
+						guests,
+				})
+		}
 	}
 	render() {
-			return (
-					<div>
-							<input type="text" onChange={this.onChange.bind(this)} />
-							<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
-							
-							<ul className="list">
-									{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
-							</ul>
-					</div>
-			)
+		return (
+			<div>
+				<input type="text" onChange={this.onChange.bind(this)} />
+				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
+				
+				<ul className="list">
+						{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
+				</ul>
+			</div>
+		)
 	}
 }
 

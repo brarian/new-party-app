@@ -16,9 +16,6 @@ export const questionsList = [
     title: `What kind of party are you having?`,
   },
   {
-    title: `Have you invited your guests?`,
-  },
-  {
     title: `Plan the menu! 
             a starter is provided below`,
   },
@@ -27,6 +24,9 @@ export const questionsList = [
   },
   {
     title: `Do you have enough silverware/glassware for all your guests?`,
+  },
+  {
+    title: `Have you invited your guests?`,
   },
   //potluck option 
   {
@@ -41,23 +41,31 @@ export const questionsList = [
   {
     title: `As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
   },
+  {
+    title: `Have you invited your guests?`,
+  },
   //questions to answer the day before the party
   {
-    title: `If the area you're entertaining in tidy?`,
+    title: `Have you invited your guests?`,
   },
   {
     title: `If the area you're entertaining in tidy?`,
   },
   {
-    title: `Is your drink station  or bar stocked?`,
+    title: `If the area you're entertaining in tidy?`,
   },
   {
-    title: `If you have a theme have you decorated?`,
+    title: `Is your drink station  or bar stocked? `,
   },
   {
-    title: `Do you have all the ingredients you need to cook with?`,
+    title: `If you have a theme have you decorated? `,
+  },
+  {
+    title: `Do you have all the ingredients you need to cook with? `,
   },
   {
     title: `6.	Have you started cooking, do as much cooking as you can the day before?`,
-  }
+  },
+
+
 ]
