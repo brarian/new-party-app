@@ -14,36 +14,43 @@ export const questionsList = [
   },
   {
     title: `What kind of party are you having?`,
-  },
-  {
-    title: `Plan the menu! 
-            a starter is provided below`,
-  },
-  {
-    title: `Will you be serving alcohol at this party?`,
-  },
-  {
-    title: `Do you have enough silverware/glassware for all your guests?`,
-  },
-  {
-    title: `Have you invited your guests?`,
-  },
+    subQuestions:{
+      potluck:[  
+        {
+          title: `Will you be serving alcohol at this party?`,
+        },
+        {
+          title: `Have you invited your guests?`,
+        },
+        {
+          title: `Are you assigning dishes?`,
+        },
+        {
+          title: `As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
+        },
+        {
+          title: `Have you invited your guests?`,
+        }
+      ],
+      dinnerParty: [  
+        {
+        title: `Plan the menu! 
+                a starter is provided below`,
+        },
+        {
+          title: `Will you be serving alcohol at this party?`,
+        },
+        {
+          title: `Do you have enough silverware/glassware for all your guests?`,
+        },
+        {
+          title: `Have you invited your guests?`
+        }
+      ]
+    }},
+
   //potluck option 
-  {
-    title: `Will you be serving alcohol at this party?`,
-  },
-  {
-    title: `Have you invited your guests?`,
-  },
-  {
-    title: `Are you assigning dishes?`,
-  },
-  {
-    title: `As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
-  },
-  {
-    title: `Have you invited your guests?`,
-  },
+
   //questions to answer the day before the party
   {
     title: `Have you invited your guests?`,

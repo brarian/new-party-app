@@ -24,13 +24,11 @@ class Theme extends React.Component {
  render() {
 		 return (
 			 <div>
-				 <select>
-					 
+				 <select onChange={this.handleChange}>
 					 <option value="No">No Theme</option>
 					 <option value="Yes">Yes, I have a Theme</option>
-				{/* {(value?=="Yes"){ return <ThemeLabel />}} */}
-			
 				 </select>
+				 {this.state.value === "Yes"? <ThemeLabel /> : ''}
 			 </div>
 		 )
 	 }
@@ -46,28 +44,14 @@ class ThemeLabel extends React.Component {
 		this.state = {
 			value: ''
 		}
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-	handleChange(e) {
-		this.setState({
-			value: e.target.value
-		});
-	}
-	handleSubmit(e) {
-		e.preventDefault();
-		alert('themelabel', this.state.value);
 	}
 
 	render(){
 		return (
 			<div>
-				<form>
 					<label>
-						<input type="text" value={this.state.value} onChange={this.handleChange} />
+						<input type="text"  onChange={this.props.onChange} />
 					</label>
-					<input type="submit" value="submit" />
-				</form>
 			</div>
 		);
 	}

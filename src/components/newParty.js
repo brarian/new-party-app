@@ -6,6 +6,7 @@ import Moment from 'react-moment';
 import Theme from './theme';
 import Type from './type';
 import Menu from './menu';
+import Time from './time';
 
 class NewParty extends React.Component {
     constructor(props) {
@@ -13,14 +14,21 @@ class NewParty extends React.Component {
         this.state = { 
             name: '',
             date: '',
-            time: '',
+						time: '',
+						menu: {},
             number: 0,
         }
     }
-    onChange = (e) => {
-      const state = this.state 
-      state[e.target.name] = e.target.value;
-      this.setState(state);
+    onChange = (e, value) => {
+			if(e === "menu"){
+				this.setState({menu: value}, () => {
+					console.log("========I came here==========>", value, this.state)
+				});
+				return null;
+			} 
+			this.setState({[e.target.name]: e.target.value}, ()=> {
+				console.log("==================>",this.state)
+			});	
     }
     handleButtonClick = () => {
         this.setState({
@@ -35,7 +43,7 @@ class NewParty extends React.Component {
             <div className="heading-text">
               <h1>Dinner Party</h1>
             </div>
-            <Questions number={this.state.number} handleButtonClick={this.handleButtonClick.bind(this)}/>
+            <Questions number={this.state.number} onChange={this.onChange.bind(this)} handleButtonClick={this.handleButtonClick.bind(this)}/>
           </div>
         )
     }
@@ -46,18 +54,17 @@ class NewParty extends React.Component {
 const Questions = (props) => {
 	return (
     <div className="party-box">
-		<form onSubmit={this.handleSubmit}>
 			<Route path="/new-party/question"  render={props =>                     
 							<div> 
 									<br />
-									{/* <input type="submit" value="Submit" /> */}
+									<input type="submit" value="Submit" />
 									<Link to={`/new-party/question-1`}>Next</Link>
 							</div>}/>
 							
 				{questionsList.map((question, index)=> {
 				if (props.number === index) {
 						return (<div>   
-								<Question index={index} question={question}/>
+								<Question index={index} question={question} onChange={props.onChange}/>
 								<br />
 
 									{props.number< questionsList.length - 1? <button onClick={props.handleButtonClick}> Next </button>: ""}
@@ -65,7 +72,6 @@ const Questions = (props) => {
 							}}
 					)
 			}
-    </form>
     </div>
   );
 }
@@ -75,11 +81,12 @@ const Question = (props) => {
 		<div>
 			<label>
 				{props.question.title}:
-				{props.index === 1? <div><Date /></div>: " "} 
-				{props.index === 2? <div><List /></div>: <input type="text"  onChange={this.onChange} />}
-				{props.index === 3? <div><Theme /></div>: " "} 
-				{props.index === 4? <div><Type /></div>: " "} 
-				{props.index === 5? <div><Menu /></div>: " "} 
+				{props.index === 0? <div><Date handleChange={props.onChange}/></div>: " "} 
+				{props.index === 1? <div><Time handleChange={props.onChange}/></div>: " "} 
+				{props.index === 2? <div><div><List /></div> <input type="text"  onChange={this.onChange} /> </div>: " "}
+				{props.index === 3? <div><Theme handleChange={props.onChange}/></div>: " "} 
+				{props.index === 4? <div><Type subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
+				{props.index === 5? <div><Menu handleChange={props.onChange} /></div>: " "} 
 			</label>
 		</div>
 	)
@@ -113,7 +120,7 @@ class List extends React.Component {
 	render() {
 		return (
 			<div>
-				<input type="text" onChange={this.onChange.bind(this)} />
+				{/* <input type="text" onChange={this.onChange.bind(this)} /> */}
 				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
 				
 				<ul className="list">

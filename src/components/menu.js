@@ -13,13 +13,14 @@ class Menu extends React.Component {
  }
 
  handleSubmit = (e) => {
-	alert(`you've picked this ${this.state.value}`);
+	 e.preventDefault();
+	this.props.handleChange('menu', this.state);
 }
 
 
  render(){
 	 return (
-		<div>
+		<form>
 			<label>
 				side
 				<input type="text" value={this.state.side} onChange={(e)=> this.setState({side: e.target.value})} />
@@ -39,7 +40,9 @@ class Menu extends React.Component {
 				bread
 				<input type="text" value={this.state.bread} onChange={(e)=> this.setState({bread: e.target.value})} />
 			</label>
-		</div>
+			<button type="submit" onClick={this.handleSubmit}>Submit</button>
+		</form>
+	
 	 );
  }
 }
