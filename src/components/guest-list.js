@@ -5,38 +5,45 @@ class GuestListForm extends React.Component {
   super(props);
   this.state = {
    guest: '',
-   guestList: []
+   guestsList: []
   };
  }
 
- onChange = (e) => {
-  this.setState({guest: e.target.value});
-}
-onSubmit = (e) => {
+handleSubmit = (e) => {
   e.preventDefault()
   this.setState({
-    guest: '',
-    guestList: [...this.state.guestList, this.state.guest]
-  })
+    guestsList: [...this.state.guestsList, this.state.guest]
+  }, () => {
+  //updated state isn't available immediately, wait until the set state method is completely finished and then push it up
+    this.props.handleChange('bigGuestList', this.state.guestsList);
+  });
+}
+handleChange= (e) => {
+  e.preventDefault();
+  this.setState({
+    guest: e.target.value
+  });
 }
  render() {
   return ( 
     <div> 
-      <form onSumbit={this.addItem}>
-        <input value={this.state.guest} onChange={this.onChange} />
-        <input type="button" value="Submit"/>
+      <form >
+        <input type="text" onChange={this.handleChange.bind(this)} />
+        <button type="button" onClick={this.handleSubmit.bind(this)}>Submit</button>
       </form>
-      <List guest = {this.state.guest} /> 
+      <List guests = {this.state.guestsList} /> 
     </div>
   );
  }
 }
 
-const List = props => (
+const List = (props) => (
   <ul>
     {
-     this.props.guest.map((guest, index) => <li key={index}>{guest}</li>)
+     props.guests.map((guest, index) => <li key={index}>{guest}</li>)
     }
   </ul>
 )
 
+
+export default GuestListForm

@@ -4,9 +4,10 @@ import {questionsList} from './dummy-data';
 import Date from './date';
 import Moment from 'react-moment';
 import Theme from './theme';
-import Type from './type';
+import Type, { SpecQuestion } from './type';
 import Menu from './menu';
 import Time from './time';
+import GuestListForm from './guest-list';
 
 class NewParty extends React.Component {
     constructor(props) {
@@ -16,12 +17,13 @@ class NewParty extends React.Component {
             date: '',
 						time: '',
 						menu: {},
-            number: 0,
+						number: 0,
+						bigGuestList: {}
         }
     }
     onChange = (e, value) => {
-			if(e === "menu"){
-				this.setState({menu: value}, () => {
+			if(typeof e === "string"){
+				this.setState({[e]: value}, () => {
 					console.log("========I came here==========>", value, this.state)
 				});
 				return null;
@@ -80,13 +82,14 @@ const Question = (props) => {
 	return (
 		<div>
 			<label>
-				{props.question.title}:
+				{props.index <= 5? props.question.title: ''}
 				{props.index === 0? <div><Date handleChange={props.onChange}/></div>: " "} 
 				{props.index === 1? <div><Time handleChange={props.onChange}/></div>: " "} 
-				{props.index === 2? <div><div><List /></div> <input type="text"  onChange={this.onChange} /> </div>: " "}
+				{props.index === 2? <div><GuestListForm handleChange={props.onChange}/></div>: " "}
 				{props.index === 3? <div><Theme handleChange={props.onChange}/></div>: " "} 
-				{props.index === 4? <div><Type subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
-				{props.index === 5? <div><Menu handleChange={props.onChange} /></div>: " "} 
+				{props.index === 4? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
+				{props.index === 5? <div><Menu handleChange={props.onChange} /></div>: " "}
+				{props.index > 5? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
 			</label>
 		</div>
 	)

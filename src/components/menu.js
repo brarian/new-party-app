@@ -9,14 +9,12 @@ class Menu extends React.Component {
 		"protien": "",
 		"bread": ""
 	};
-
  }
 
  handleSubmit = (e) => {
 	 e.preventDefault();
 	this.props.handleChange('menu', this.state);
 }
-
 
  render(){
 	 return (

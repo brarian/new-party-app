@@ -17,36 +17,53 @@ export const questionsList = [
     subQuestions:{
       potluck:[  
         {
-          title: `Will you be serving alcohol at this party?`,
+          title: `potluck, Will you be serving alcohol at this party?`,
         },
         {
-          title: `Have you invited your guests?`,
+          title: `potluck, Have you invited your guests?`,
         },
         {
-          title: `Are you assigning dishes?`,
+          title: `potluck, Are you assigning dishes?`,
         },
         {
-          title: `As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
+          title: `potluck, As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
         },
         {
-          title: `Have you invited your guests?`,
+          title: `potluck, Have you invited your guests?`,
         }
       ],
       dinnerParty: [  
         {
-        title: `Plan the menu! 
+        title: `dinnerParty, Plan the menu! 
                 a starter is provided below`,
         },
         {
-          title: `Will you be serving alcohol at this party?`,
+          title: `dinnerParty, Will you be serving alcohol at this party?`,
         },
         {
-          title: `Do you have enough silverware/glassware for all your guests?`,
+          title: `dinnerParty, Do you have enough silverware/glassware for all your guests?`,
         },
         {
-          title: `Have you invited your guests?`
+          title: `dinnerParty, Have you invited your guests?`
         }
-      ]
+      ],
+      cocktail:[  
+        {
+          title: `cocktail, Will you be serving alcohol at this party?`,
+        },
+        {
+          title: `cocktail, Have you invited your guests?`,
+        },
+        {
+          title: `cocktail, Are you assigning dishes?`,
+        },
+        {
+          title: `cocktail, As the host it's up to you to provide drinks! Will you be sering alcohol to your guests?`,
+        },
+        {
+          title: `cocktail, Have you invited your guests?`,
+        }
+      ],
     }},
 
   //potluck option 

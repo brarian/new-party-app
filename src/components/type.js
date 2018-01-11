@@ -3,33 +3,53 @@ import React from 'react';
 class Type extends React.Component {
   constructor(props) {
    super(props);
-	this.state = {
-		subQuestion: '',
-		number: 0,
-	}
 }
 
 handleChange(e){
-	this.setState({subQuestion: e.target.value});
+	e.preventDefault();
+	this.setState({subQuestionType: e.target.value});
 }
+handleSubQuestionChange(e){
+	e.preventDefault();
+	this.setState({
+		[e.target.name]: e.target.value
+	});
 
+}
+handleClick(e){
+	e.preventDefault();
+	this.props.handleChange("subquestion", this.state)
+}
 
 // index.js:2177 Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.
 render() {
-    return (
-			<div>
-				<select onChange={this.handleChange}>
-					<option  value="dinnerParty">Dinner Party</option>
-					<option value="cocktailParty">Cocktail Party</option>
-					<option value="potluck">Potluck</option>
-				</select>
-				{/* {this.state.subQuestion? props.subQuestions[this.state.subQuestion].map(): ''} */}
+	return (
+		<div>
+			<select onChange={this.handleChange.bind(this)}>
+				<option  value="dinnerParty">Dinner Party</option>
+				<option value="cocktail">Cocktail Party</option>
+				<option value="potluck">Potluck</option>
+			</select>
 
+			{this.state.subQuestionType? <div>{this.props.subQuestions[this.state.subQuestionType].map((question, index) =>(
+				<SpecQuestion handleSubQuestionChange={this.handleSubQuestionChange.bind(this)} question={question} />))}
+				<button onClick={this.handleClick.bind(this)}>Submit </button> </div>: ''}
 
-			</div>
-    )
+		</div>
+	)
 	}
 }
 
 
+export const SpecQuestion = (props) => {
+	return (
+		<div>
+			<label>{props.question.title}:</label>
+				 <select name={props.question.title} onChange={props.handleSubQuestionChange}>
+					 <option value="No">No</option>
+					 <option value="Yes">Yes</option>
+				 </select>
+		</div>
+	)
+}
 export default Type
