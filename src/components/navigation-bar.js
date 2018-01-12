@@ -14,7 +14,7 @@ const NavigationBar = () => (
         <li><Link to="/new-party" >New Party </Link></li>
         <li><Link to="/profile" >Profile </Link></li>
         <li><Link to="/about"  >About </Link></li>
-        <li><Link to="/signIn"  >Sign In </Link></li>
+        <li><Link to="/newUser"  >New User Reg</Link></li>
         <li><Link to="/logIn"   >logIn </Link></li>
       </ul>
     </nav>

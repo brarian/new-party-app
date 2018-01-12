@@ -4,16 +4,23 @@ import NavigationBar from './components//navigation-bar';
 import {
   BrowserRouter as Router} from 'react-router-dom';
 import ReactContainer from './route-container';
+import configureStore from './store';
+import { Provider } from 'react-redux';
 
+const initialState = {};
+
+const store = configureStore(initialState);
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-        <NavigationBar />
-        <ReactContainer />
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div>
+          <NavigationBar />
+          <ReactContainer />
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }

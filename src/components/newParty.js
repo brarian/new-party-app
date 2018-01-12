@@ -14,11 +14,12 @@ class NewParty extends React.Component {
         super(props);
         this.state = { 
             name: '',
-            date: '',
-						time: '',
-						menu: {},
-						number: 0,
-						bigGuestList: {}
+			date: '',
+			// use moment to save date and subtract 24hours, then render the last set of questions 
+			time: '',
+			menu: {},
+			number: 0,
+			bigGuestList: {}
         }
     }
     onChange = (e, value) => {
@@ -35,7 +36,7 @@ class NewParty extends React.Component {
     handleButtonClick = () => {
         this.setState({
             number: this.state.number + 1
-        })
+        });
     }
 
     render() {

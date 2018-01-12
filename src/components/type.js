@@ -3,6 +3,9 @@ import React from 'react';
 class Type extends React.Component {
   constructor(props) {
    super(props);
+   this.state = {
+	   subQuestionType: ""
+   };
 }
 
 handleChange(e){
