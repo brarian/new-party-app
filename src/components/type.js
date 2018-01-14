@@ -35,7 +35,7 @@ render() {
 			</select>
 
 			{this.state.subQuestionType? <div>{this.props.subQuestions[this.state.subQuestionType].map((question, index) =>(
-				<SpecQuestion handleSubQuestionChange={this.handleSubQuestionChange.bind(this)} question={question} />))}
+				<SpecQuestion key={index} handleSubQuestionChange={this.handleSubQuestionChange.bind(this)} question={question} />))}
 				<button onClick={this.handleClick.bind(this)}>Submit </button> </div>: ''}
 
 		</div>

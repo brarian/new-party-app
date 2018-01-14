@@ -23,6 +23,9 @@ class Login extends React.Component {
     if(this.props.username){
       console.log("Login was successful", this.props.username, this.props.email);
     }
+    if(this.props.eventData){
+      console.log("======================>login", this.props.eventData);
+    }
     return (
       <div>
         <h1>Sign Into Your Account</h1>
@@ -45,7 +48,8 @@ class Login extends React.Component {
 const mapStoreToProps = (store) => {
   return {
     username: store.loginReducer.username,
-    email: store.loginReducer.email
+    email: store.loginReducer.email,
+    eventData: store.submitReducer.eventData
   };
 } 
 const mapDispatchToProps = (dispatch) => {
