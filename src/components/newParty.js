@@ -52,7 +52,7 @@ class NewParty extends React.Component {
 		// const {name, date, time } = this.state;
 			return (
 				<div>
-					<div className="heading-text">
+					<div className="party-box">
 						<h1>Dinner Party</h1>
 					</div>
 					<Questions number={this.state.number} onChange={this.onChange.bind(this)} handleButtonClick={this.handleButtonClick.bind(this)}/>

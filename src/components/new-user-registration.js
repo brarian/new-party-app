@@ -23,8 +23,9 @@ class NewUserRegistration extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Create a New Account</h1>
 				<div className="party-box">
+				<h1>Create a New Account</h1>
+				
 					<section className="login-style">
 						<label> First Name</label>
 						<input type="text" name="first"  onChange = {this.onChange} required/>

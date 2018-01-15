@@ -28,8 +28,8 @@ class Login extends React.Component {
     }
     return (
       <div>
-        <h1>Sign Into Your Account</h1>
         <div className="party-box">
+        <h1>Sign Into Your Account</h1>
           <section className="login-style">
             <label> username</label>
             <input type="email" name="email" onChange = {this.onChange.bind(this)} required/>
