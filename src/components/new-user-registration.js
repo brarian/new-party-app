@@ -28,16 +28,16 @@ class NewUserRegistration extends React.Component {
 				
 					<section className="login-style">
 						<label> First Name</label>
-						<input type="text" name="first"  onChange = {this.onChange} required/>
+						<input type="text" name="firstName"  onChange = {this.onChange} required/>
 						<br />
 						<label> Last Name</label>
-						<input type="text" name="lasr"  onChange = {this.onChange} required/>
+						<input type="text" name="lastName"  onChange = {this.onChange} required/>
 						<br />
 						<label> Email</label>
 						<input type="email"  name="email"  onChange = {this.onChange} required/>
 						<br />
 						<label> Username</label>
-						<input type="text"  name="username"   onChange = {this.onChange} required/>
+						<input type="text"  name="userName"   onChange = {this.onChange} required/>
 						<br />
 						<label>Create a Password</label>
 						<input type="password" name="password"   onChange = {this.onChange} required/>

@@ -13,6 +13,9 @@ export const questionsList = [
     title: `If there is a theme?`,
   },
   {
+    title: `What would you like to name this party?`,
+  },
+  {
     title: `What kind of party are you having?`,
     subQuestions:{
       potluck:[  

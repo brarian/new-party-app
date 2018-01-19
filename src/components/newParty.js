@@ -10,6 +10,7 @@ import Time from './time';
 import GuestListForm from './guest-list';
 import submitAction from '../actions/submit';
 import {connect} from 'react-redux';
+import Name from './name';
 
 class NewParty extends React.Component {
   constructor(props) {
@@ -96,9 +97,10 @@ return (
 			{props.index === 1? <div><Time handleChange={props.onChange}/></div>: " "} 
 			{props.index === 2? <div><GuestListForm handleChange={props.onChange}/></div>: " "}
 			{props.index === 3? <div><Theme handleChange={props.onChange}/></div>: " "} 
-			{props.index === 4? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 5? <div><Menu handleChange={props.onChange} /></div>: " "}
-			{props.index > 5? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
+			{props.index === 4? <div><Name handleChange={props.onChange}/></div>: " "} 
+			{props.index === 5? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 6? <div><Menu handleChange={props.onChange} /></div>: " "}
+			{props.index > 6? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
 
 			
 		</label>
@@ -113,7 +115,7 @@ constructor(props){
 			guests: [],
 			guest: ""
 		}
-}   
+	}   
 
 	onChange = (e) => {
 		e.preventDefault();
@@ -121,6 +123,7 @@ constructor(props){
 			guest: e.target.value,
 		});
 	}
+
 	onSubmit = (e) => {
 		e.preventDefault();
 		if(this.state.guest){
@@ -132,12 +135,10 @@ constructor(props){
 		}
 	}
 	render() {
-		
 		return (
 			<div>
 				{/* <input type="text" onChange={this.onChange.bind(this)} /> */}
 				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
-				
 				<ul className="list">
 						{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
 				</ul>
