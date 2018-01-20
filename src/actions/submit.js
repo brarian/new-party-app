@@ -1,18 +1,25 @@
 import actionTypes from './actionTypes';
+import { API_BASE_URL } from "../config";
 
 const submitAction = (formData) => {
-	console.log('inside submit action');
-	console.log(formData)
-	const payload = {
-		submitResponse: "form submitted",
-		eventData: formData
-	}
-	//need to send this form to the API 
-	//here is where we communicate to mongo to save etc...
-	return(dispatch) => {
-		return dispatch({
-			type: actionTypes.SUBMIT,
-			payload,
+	return (dispatch) => {
+		return fetch(`${API_BASE_URL}`, {
+			headers: {
+				'Accept' : 'application/json', 
+				'Content-Type': 'application/json'
+			},
+			method: "post",
+			body: JSON.stringify(formData)
+		})
+		.then((data) => data.json())
+		.then((data) => {
+			return dispatch({
+				type: actionTypes.SUBMIT,
+				payload: data 
+			});
+		})
+		.catch((error) => {
+			console.log(error)
 		})
 	}
 }
