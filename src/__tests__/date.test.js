@@ -1,10 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import Menu from '../components/menu';
 
-describe('<Menu />', () => {
+import Date from '../components/date';
+
+
+describe('<Date />', () => {
  it('renders without crashing', () => {
-  shallow( < Menu /> );
+  shallow( < Date /> );
  })
+
+ 
 })

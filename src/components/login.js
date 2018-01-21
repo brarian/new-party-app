@@ -20,8 +20,8 @@ class Login extends React.Component {
     //submit form 
   }
   render() {
-    if(this.props.username){
-      console.log("Login was successful", this.props.username, this.props.email);
+    if(this.props.userName){
+      console.log("Login was successful", this.props.userName, this.props.password);
     }
     if(this.props.eventData){
       console.log("======================>login", this.props.eventData);
@@ -32,7 +32,7 @@ class Login extends React.Component {
         <h1>Sign Into Your Account</h1>
           <section className="login-style">
             <label> username</label>
-            <input type="email" name="email" onChange = {this.onChange.bind(this)} required/>
+            <input type="text" name="userName" onChange = {this.onChange.bind(this)} required/>
             <br/>
             <label>password</label>
             <input type="password" name="password" onChange = {this.onChange.bind(this)} required/>
@@ -47,7 +47,7 @@ class Login extends React.Component {
 
 const mapStoreToProps = (store) => {
   return {
-    username: store.loginReducer.username,
+    username: store.loginReducer.userName,
     email: store.loginReducer.email,
     eventData: store.submitReducer.eventData
   };

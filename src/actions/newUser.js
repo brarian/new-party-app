@@ -2,7 +2,6 @@ import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
 
 const newUserAction = (credentials) => {
-    //more API stuff another response 
   return (dispatch) => {
     return fetch(`${API_BASE_URL}/users/`, {
       headers: { 
