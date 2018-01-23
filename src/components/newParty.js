@@ -11,6 +11,7 @@ import GuestListForm from './guest-list';
 import submitAction from '../actions/submit';
 import {connect} from 'react-redux';
 import Name from './name';
+import { withRouter } from 'react-router-dom'; 
 
 class NewParty extends React.Component {
   constructor(props) {
@@ -26,7 +27,13 @@ class NewParty extends React.Component {
 			// need take menu out of state if the submit button will save state 
 			bigGuestList: {}
         }
-    }
+	}
+	componentWillMount(){
+		const token = window.localStorage.getItem('token');
+		if (!token){
+			this.props.history.push('/login')
+		}
+	}
 	onChange = (e, value) => {
 		if(typeof e === "string"){
 			this.setState({[e]: value}, () => {
@@ -50,6 +57,7 @@ class NewParty extends React.Component {
 	}
 
 	render() {
+		
 		// const {name, date, time } = this.state;
 			return (
 				<div>
@@ -159,4 +167,4 @@ const mapDispatchtoProps = (dispatch) => {
 		submitAnswers: (formData) => (dispatch(submitAction(formData)))
 	}
 }
-export default connect(mapStoretoProps, mapDispatchtoProps)(NewParty);
+export default connect(mapStoretoProps, mapDispatchtoProps)(withRouter(NewParty));

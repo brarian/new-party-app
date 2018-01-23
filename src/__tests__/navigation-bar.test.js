@@ -4,7 +4,7 @@ import {Provider } from 'react-redux';
 import configureStore from '../store';
 const store = configureStore({});
 
-import { NavigationBar } from "../components/navigation-bar";
+import NavigationBar from "../components/navigation-bar";
 
 describe('<NavigationBar />', () => {
 	it('Renders without crashing', () => {

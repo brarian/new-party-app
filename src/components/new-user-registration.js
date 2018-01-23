@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect } from 'react-redux';
 import newUserAction from '../actions/newUser';
+import { withRouter } from 'react-router-dom'; 
 
 class NewUserRegistration extends React.Component {
 	constructor(props){
@@ -21,6 +22,11 @@ class NewUserRegistration extends React.Component {
 		//submit form 
 	  }
 	render() {
+		console.log("======================++>",this.props.username)
+		if (this.props.username) {
+      this.props.history.push('/new-party')
+		}
+		
 		return (
 			<div>
 				<div className="party-box">
@@ -49,9 +55,18 @@ class NewUserRegistration extends React.Component {
 	}
 } 
 
+const mapStoreToProps = (store) => {
+	console.log(store.newUserReducer.userName)
+  return {
+    username: store.newUserReducer.userName,
+    email: store.newUserReducer.email,
+    eventData: store.newUserReducer.eventData
+  };
+} 
+
 const mapDispatchToProps = (dispatch) => {
 	return {
 		signUp: (credentials) => dispatch(newUserAction(credentials))
 	}
 }
-export default connect(null, mapDispatchToProps)(NewUserRegistration);
+export default connect(mapStoreToProps, mapDispatchToProps)(withRouter(NewUserRegistration));

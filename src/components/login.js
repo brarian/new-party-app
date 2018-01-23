@@ -1,6 +1,8 @@
 import React from 'react';
 import loginAction from '../actions/login';
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom'; 
+
 class Login extends React.Component {
   constructor(props){
     super(props);
@@ -25,6 +27,10 @@ class Login extends React.Component {
     }
     if(this.props.eventData){
       console.log("======================>login", this.props.eventData);
+    }
+
+    if (this.props.username) {
+      this.props.history.push('/new-party')
     }
     return (
       <div>
@@ -58,4 +64,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 } 
 
-export default connect(mapStoreToProps, mapDispatchToProps)(Login);
+export default connect(mapStoreToProps, mapDispatchToProps)(withRouter(Login));

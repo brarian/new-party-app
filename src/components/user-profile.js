@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'tls';
+import { withRouter } from 'react-router-dom'; 
 
 class Profile extends React.Component {
+	componentWillMount(){
+		const token = window.localStorage.getItem('token');
+		if (!token){
+			this.props.history.push('/login')
+		}
+	}
 	render() {
 		return (
 			<div>
@@ -22,10 +29,5 @@ class Profile extends React.Component {
 		)
 	}
 } 
-//this is a higher order component
-const connectedProfile = (props) => {
-  return  (
-     <Profile name={"Cliff"} email={"cliffsemail@gmail"} partyname={"Lori's Party"} date={"12/1/2017"} size={"20"}/>
-  )
-}
-export default connectedProfile;
+
+export default (withRouter(Profile));
