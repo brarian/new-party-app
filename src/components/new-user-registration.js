@@ -22,7 +22,6 @@ class NewUserRegistration extends React.Component {
 		//submit form 
 	  }
 	render() {
-		console.log("======================++>",this.props.username)
 		if (this.props.username) {
       this.props.history.push('/new-party')
 		}
