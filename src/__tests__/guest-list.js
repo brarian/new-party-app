@@ -12,7 +12,8 @@ describe('<GuestListForm />', () => {
 
  it('returns name', () => {
   const t = mount( < GuestListForm /> );
-  t.find('input').node.value = 'Daisy';
-  expect(t.val()).toEqual("Daisy");
+  const inputName = t.find('input');
+  inputName.value = 'Daisy';
+  expect(inputName.value).toBe("Daisy");
  });
 })

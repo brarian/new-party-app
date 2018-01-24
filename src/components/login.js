@@ -29,7 +29,7 @@ class Login extends React.Component {
       console.log("======================>login", this.props.eventData);
     }
 
-    if (this.props.username) {
+    if (this.props.username && window.localStorage.getItem('token')) {
       this.props.history.push('/new-party')
     }
     return (

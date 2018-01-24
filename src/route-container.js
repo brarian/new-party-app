@@ -9,6 +9,7 @@ import Profile from './components/user-profile';
 import About from './components/about';
 import NewUserRegistration from './components/new-user-registration';
 import LogIn from './components/login';
+import  LogOut from './components/logout';
 class ReactContainer extends React.Component {
     render() {
         return (
@@ -20,6 +21,7 @@ class ReactContainer extends React.Component {
                 <Route path="/about" component={About}/> 
                 <Route path="/newUser" component={NewUserRegistration}/>
                 <Route path="/logIn" component={LogIn}/>
+                <Route path="/logOut" component={LogOut}/>
             </Fragment>
         )
     }

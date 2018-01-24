@@ -16,6 +16,8 @@ const NavigationBar = () => (
         <li><Link to="/about"  >About </Link></li>
         <li><Link to="/newUser"  >New User</Link></li>
         <li><Link to="/logIn"   >logIn </Link></li>
+        <li><Link to="/logOut"    >logOut </Link></li>
+
       </ul>
     </nav>
   </div>
