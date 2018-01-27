@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'tls';
 import { withRouter } from 'react-router-dom'; 
+import partyDataAction from '../actions/partyData';
 
 class Profile extends React.Component {
 	componentWillMount(){
@@ -30,4 +31,21 @@ class Profile extends React.Component {
 	}
 } 
 
-export default (withRouter(Profile));
+// const mapStoreToProps = (store) => {
+// 	return {
+// 		date: store.partyDataReducer.date,
+// 		time: store.partyDataReducer.time,
+// 		bigGuestList: store.partyDataReducer.bigGuestList,
+
+// 	}
+// }
+
+// const matchDispatchToProps = (dispatch) => {
+// 	return {
+// 		profile: (user) => dispatch(partyDataAction(user))
+// 	}
+// }
+
+
+// export default connect(mapStoreToProps, matchDispatchToProps)(withRouter(Profile));
+export default Profile

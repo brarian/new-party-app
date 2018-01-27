@@ -46,7 +46,7 @@ class NewUserRegistration extends React.Component {
 						<br />
 						<label>Create a Password</label>
 						<input type="password" name="password"   onChange = {this.onChange} required/>
-						<button onClick={this.handleClick}>create a new account</button>
+						<button onClick={this.handleClick}>CREATE MY ACCOUNT</button>
 					</section>
 				</div>
 			</div>

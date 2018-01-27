@@ -16,7 +16,6 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <h1>Little Mix</h1>
           <NavigationBar />
           <ReactContainer />
           </div>
