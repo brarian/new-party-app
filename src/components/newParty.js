@@ -12,6 +12,7 @@ import submitAction from '../actions/submit';
 import {connect} from 'react-redux';
 import Name from './name';
 import { withRouter } from 'react-router-dom'; 
+const jwtDecode = require('jwt-decode');
 
 class NewParty extends React.Component {
   constructor(props) {
@@ -25,11 +26,13 @@ class NewParty extends React.Component {
 			menu: {},
 			number: 0,
 			// need take menu out of state if the submit button will save state 
-			bigGuestList: {}
+			bigGuestList: {},
+			userId: ''
         }
 	}
 	componentWillMount(){
 		const token = window.localStorage.getItem('token');
+		this.setState({ userId: jwtDecode(token).userId });
 		if (!token){
 			this.props.history.push('/login')
 		}
@@ -57,8 +60,7 @@ class NewParty extends React.Component {
 	}
 
 	render() {
-		
-		// const {name, date, time } = this.state;
+		console.log(this.state)
 			return (
 				<div>
 					<div className="party-box">
@@ -156,9 +158,11 @@ constructor(props){
 }
 
 const mapStoretoProps = (store) => {
+	console.log(store);
 	return { 
 		submitResponse: store.submitReducer.submitResponse,
-		eventData: store.submitReducer.eventData
+		eventData: store.submitReducer.eventData,
+		// userData: store
 	}
 }
 
