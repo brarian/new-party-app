@@ -12,8 +12,7 @@ class Profile extends React.Component {
 			partyData: []
 		}
 	}
-	componentDidMount(){
-	}
+
 	componentWillMount(){
 		const token = window.localStorage.getItem('token');
 		if (!token){
@@ -39,31 +38,23 @@ class Profile extends React.Component {
 				<div className="party-box">
 				<h1>Profile</h1>
 					<ul>
-						<div> Name: {this.state.userData.userName}</div>
-						<div> Email: {this.state.userData.email}</div>
+						<div> <strong>Name:</strong> {this.state.userData.userName}</div>
+						<div> <strong>Email:</strong> {this.state.userData.email}</div>
 						<br />
 						{/* component that renders recent parties */}
 						{ 
 							this.state.partyData.map(party =>{
 								return (
 									<div className="small-box" >
-										<div> <strong>Party Name: {party.name}</strong> </div>
-										<div>Party Date: {party.date}</div>
-										<p>{party._id}</p>
-										{/* <div>party Size: {party.size}</div> */}
+										<div> <strong>Party Name:</strong> {party.name} </div>
+										<div> <strong>Party Date:</strong> {party.date}</div>
+										<div> <strong>Party Time:</strong> {party.time}</div>
 										<br />
 									</div>
 								)
 							}) 
 						}
-
-							<div className="small-box" >
-									<div> <strong>Party Name: {this.props.partyname}</strong></div> 
-									<div>Party Date: {this.props.date}</div>  
-									<div>party Size: {this.props.size}</div>
-							</div>
-							<br />
-						</ul>
+					</ul>
 				</div>
 			</div>
 		)

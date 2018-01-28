@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route, Link, Switch} from 'react-router-dom'; 
 import {questionsList} from './dummy-data';
-import Date from './date';
-import Moment from 'react-moment';
+import DateComponent from './date';
+// import Moment from 'react-moment';
 import Theme from './theme';
 import Type, { SpecQuestion } from './type';
 import Menu from './menu';
@@ -12,6 +12,7 @@ import submitAction from '../actions/submit';
 import {connect} from 'react-redux';
 import Name from './name';
 import { withRouter } from 'react-router-dom'; 
+import Moment from 'moment';
 const jwtDecode = require('jwt-decode');
 
 class NewParty extends React.Component {
@@ -43,14 +44,23 @@ class NewParty extends React.Component {
 				console.log("========I came here==========>", value, this.state)
 			});
 			return null;
-		} 
-		this.setState({[e.target.name]: e.target.value}, ()=> {
-			console.log("==================>",this.state)
+		}
+	
+		this.setState({[e.target.name]: e.target.name=== "time" ? Moment(e.target.value, "HH:mm").format('hh:mm a'):e.target.value}, ()=> {
 		});	
 }
 
 //!!! work on this!!!! this is what will have to go in the action, 
 	handleButtonClick = (e) => {
+			if(this.state.number=== 0){
+				const date = new Date(this.state.date);
+				const now = new Date();
+				if(date.getTime() < now.getTime()){
+					alert("you need to select a date in the future!");
+					return null;
+				}
+			} 
+
 			this.setState({
 					number: this.state.number + 1
 			});
@@ -103,8 +113,10 @@ return (
 	<div>
 		<label>
 			{props.index <= 5? props.question.title: ''}
-			{props.index === 0? <div><Date handleChange={props.onChange}/></div>: " "} 
+			{props.index === 0? <div><DateComponent  handleChange={props.onChange}/></div>: " "} 
+
 			{props.index === 1? <div><Time handleChange={props.onChange}/></div>: " "} 
+			
 			{props.index === 2? <div><GuestListForm handleChange={props.onChange}/></div>: " "}
 			{props.index === 3? <div><Theme handleChange={props.onChange}/></div>: " "} 
 			{props.index === 4? <div><Name handleChange={props.onChange}/></div>: " "} 

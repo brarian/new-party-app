@@ -1,5 +1,12 @@
 import React from 'react';
+import setting from '../images/setting.png';
+import WebFont from 'webfontloader';
 
+WebFont.load({
+  google: {
+    families: ['Titillium Web:300,400,700', 'sans-serif']
+  }
+});
 class LandingPage extends React.Component {
 
 
@@ -20,7 +27,9 @@ class LandingPage extends React.Component {
 					    <h1 > -- 3 --</h1>
                         <h2>Enjoy entertaining, another line which will make the divs</h2>
                     </div>
+					<img src={setting} />
 				</div>
+
 			</div>
 		)
 	}

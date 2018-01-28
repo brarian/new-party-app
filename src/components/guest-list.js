@@ -29,7 +29,7 @@ handleChange= (e) => {
     <div> 
       <form >
         <input type="text" onChange={this.handleChange.bind(this)} />
-        <button type="button" onClick={this.handleSubmit.bind(this)}>Submit</button>
+        <button type="button" onClick={this.handleSubmit.bind(this)}>Add a Guest</button>
       </form>
       <List guests = {this.state.guestsList} /> 
     </div>
