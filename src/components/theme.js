@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TipBox from './tipBox';
 
 class Theme extends React.Component {
   constructor(props) {
@@ -24,7 +24,11 @@ class Theme extends React.Component {
  render() {
 		 return (
 			 <div>
+				 <TipBox tips="Is there a holiday or celebration you're throwing this party for, keep it in mind"/>
+
+				<h3>{this.props.title}</h3>
 				 <select onChange={this.handleChange}>
+				 	<option value="">theme option</option>
 					 <option value="No">No Theme</option>
 					 <option value="Yes">Yes, I have a Theme</option>
 				 </select>

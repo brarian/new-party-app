@@ -28,7 +28,9 @@ handleClick(e){
 render() {
 	return (
 		<div>
+			<h3>{this.props.title}</h3>
 			<select onChange={this.handleChange.bind(this)}>
+				<option value="">party option</option>
 				<option  value="dinnerParty">Dinner Party</option>
 				<option value="cocktail">Cocktail Party</option>
 				<option value="potluck">Potluck</option>

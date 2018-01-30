@@ -13,6 +13,7 @@ import {connect} from 'react-redux';
 import Name from './name';
 import { withRouter } from 'react-router-dom'; 
 import Moment from 'moment';
+import TipBox from './tipBox';
 const jwtDecode = require('jwt-decode');
 
 class NewParty extends React.Component {
@@ -112,16 +113,15 @@ const Question = (props) => {
 return (
 	<div>
 		<label>
-			{props.index <= 5? props.question.title: ''}
-			{props.index === 0? <div><DateComponent  handleChange={props.onChange}/></div>: " "} 
+			{props.index === 0? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "} 
 
-			{props.index === 1? <div><Time handleChange={props.onChange}/></div>: " "} 
+			{props.index === 1? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			
-			{props.index === 2? <div><GuestListForm handleChange={props.onChange}/></div>: " "}
-			{props.index === 3? <div><Theme handleChange={props.onChange}/></div>: " "} 
-			{props.index === 4? <div><Name handleChange={props.onChange}/></div>: " "} 
+			{props.index === 2? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
+			{props.index === 3? <div><Theme title={props.question.title} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 4? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 5? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 6? <div><Menu handleChange={props.onChange} /></div>: " "}
+			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
 			{props.index > 6? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
 
 			

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TipBox from './tipBox';
 class GuestListForm extends React.Component {
  constructor(props) {
   super(props);
@@ -27,6 +27,9 @@ handleChange= (e) => {
  render() {
   return ( 
     <div> 
+      <TipBox tips="be mindful of how many people and whom you invite"/>
+
+      <h3>{this.props.title}</h3>
       <form >
         <input type="text" onChange={this.handleChange.bind(this)} />
         <button type="button" onClick={this.handleSubmit.bind(this)}>Add a Guest</button>

@@ -54,13 +54,17 @@ ul.header li {
 .party-box {
   grid-area: "party-box";
   background-color: #F0F8FF	;
-  padding-top: 50px;
-  padding-bottom: 120px;
+  padding-top: 10px;
+  padding-bottom: 40px;
   text-align: center;
+  width: 100%;
 }
 
+
 .boxed {
-  width: 30%;
+  width: 300px;
+  height: 200px;
+  display: inline-block;
 }
 
 .party-box  button{
@@ -75,7 +79,6 @@ ul.header li {
   margin-right: auto;
 }
 
-
 .login-style label{
   display: inline-block;
   width: 140px;
@@ -86,7 +89,37 @@ ul.header li {
 .party-box .login-style input {
   width: 200px;
 }
+.landingBox{
+  grid-area: "party-box";
+  background-color: #F0F8FF	;
+  padding-bottom: 120px;
+  text-align: center;
+}
 
+.landingPic{
+  width: 552px;
+  height: 800px;
+  background-color: ;
+  background-repeat: no-repeat, repeat;
+  background-image: url("./images/blankSlate.jpg");
+  background-blend-mode: multiply;
+}
+.tipBox{
+border: 1px solid blue;
+width: 450px;
+height: 100px;
+margin-left: auto;
+margin-right: auto;
+}
+
+input{
+  height: 30px;
+  font-size: 16px; 
+}
+.landing1{
+  display: flex;
+  justify-content: space-around;
+}
 /*
 .party-box h2 {
   padding: 0;
