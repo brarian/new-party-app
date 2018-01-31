@@ -96,13 +96,14 @@ ul.header li {
   text-align: center;
 }
 
-.landingPic{
+.landingPic img{
   width: 552px;
   height: 800px;
-  background-color: ;
+  z-index: 1;
+  /* background-color: ;
   background-repeat: no-repeat, repeat;
   background-image: url("./images/blankSlate.jpg");
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; */
 }
 .tipBox{
 border: 1px solid blue;
@@ -119,6 +120,7 @@ input{
 .landing1{
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 }
 /*
 .party-box h2 {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {Provider } from 'react-redux';
-import {configureStore} from '../store';
+import { Provider } from 'react-redux';
+import configureStore from '../store';
 import NavigationBar from "../components/navigation-bar";
 
 const store = configureStore({});
@@ -9,12 +9,9 @@ const store = configureStore({});
 
 describe('<NavigationBar />', () => {
 	it('Renders without crashing', () => {
-		shallow(<Provider store={store}> <NavigationBar /> </Provider>);
+		shallow(<Provider store={store}>
+		 <NavigationBar /> 
+		 </Provider>);
 	});
-
-	// it('should display new component once clicked', () => {
-	// 	const callback = jest.fn();
-	// 	const wrapper = shallow(<NavigationBar onClick={callback} />)
-	// })
 
 })

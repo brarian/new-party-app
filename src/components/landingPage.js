@@ -14,11 +14,8 @@ class LandingPage extends React.Component {
 		return (
 			<div >
 				<div className="landingBox">
-					<div className="landing">
-					  <div className="landingPic">
-						{/* <img src={blankSlate} /> */}
-					
-					</div>
+						<div className="landingPic">
+						</div>
 						<div className="landing1"> 
 							<div className="boxed">
 								<h1 > -- 1 --</h1>
@@ -33,12 +30,9 @@ class LandingPage extends React.Component {
 								<h2>Enjoy entertaining, another line which will make the divs</h2>
 							</div>
 						</div>
-						</div>
-
 				</div>
-
 			</div>
-		)
+			)
 	}
 } 
 

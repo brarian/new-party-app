@@ -1,26 +1,17 @@
 import jwtDecode from 'jwt-decode';
 import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
-
+import axios from 'axios';
 const newUserAction = (credentials) => {
   return (dispatch) => {
-    return fetch(`${API_BASE_URL}/users/`, {
-      headers: { 
-				'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "post",
-      body: JSON.stringify(credentials),
-    })
-    .then((user)=> user.json())
+    
+    return axios.post(`${API_BASE_URL}/users/`, credentials)
     .then((user)=> {
-      const { token } = user;
+      const { token } = user.data;
       window.localStorage.setItem('token', token)
-      const decodedUser = jwtDecode(token);
-      console.log(decodedUser);
       return  dispatch({
         type: actionTypes.NEW_USER,
-        payload: decodedUser
+        payload: token
       });
     }).catch((error)=> {
       console.log(error)

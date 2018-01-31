@@ -13,7 +13,7 @@ describe('<Login />', () => {
  })
  it('renders text and password inputs', () => {
 	const wrapper = mount( <Provider store ={store}><Login /></Provider>);
-	expect(wrapper.find('input[type="password"]'));
-	expect(wrapper.find('input[type="text"]'));
+	expect(wrapper.find('input[type="password"]').length).toEqual(1);
+	expect(wrapper.find('input[type="text"]').length).toEqual(1);
  })
 })
