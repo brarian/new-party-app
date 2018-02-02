@@ -29,12 +29,13 @@ describe('newUser', () => {
 		  status: 201,
 		  response,
 		});
-	  });
+	});
   
 	  const expectedActions = 
-		[{ type: actionTypes.NEW_USER,
-		 payload: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImZyZWVtaWxlIiwidXNlcklkIjoiNWE3MTBiODQ2YmUzMjJkZTU5MDhjMTVjIiwiZW1haWwiOiJtYWlsQG1haWwuY29tIiwiaWF0IjoxNTE3MzU3OTU3LCJleHAiOjE1MTc0NDQzNTd9.rjUnaV9MHJFbE2TAIZSTMMrMlmjGf8q5sw7W6hEfnBM' 
-		} ];
+		[{ 
+			type: actionTypes.NEW_USER,
+		 	payload: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImZyZWVtaWxlIiwidXNlcklkIjoiNWE3MTBiODQ2YmUzMjJkZTU5MDhjMTVjIiwiZW1haWwiOiJtYWlsQG1haWwuY29tIiwiaWF0IjoxNTE3MzU3OTU3LCJleHAiOjE1MTc0NDQzNTd9.rjUnaV9MHJFbE2TAIZSTMMrMlmjGf8q5sw7W6hEfnBM' 
+		}];
   
 	  const store = mockStore({ user: {} })
   

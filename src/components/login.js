@@ -54,7 +54,7 @@ class Login extends React.Component {
 const mapStoreToProps = (store) => {
   return {
     username: store.loginReducer.userName,
-    email: store.loginReducer.email,
+    password: store.loginReducer.password,
     eventData: store.submitReducer.eventData
   };
 } 
