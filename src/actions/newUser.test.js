@@ -23,7 +23,6 @@ describe('newUser', () => {
 		message: 'user was created' 
 	}
 	moxios.wait(() => {
-
 		const request = moxios.requests.mostRecent();
 		request.respondWith({
 		  status: 201,

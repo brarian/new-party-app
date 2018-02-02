@@ -14,6 +14,8 @@ import Name from './name';
 import { withRouter } from 'react-router-dom'; 
 import Moment from 'moment';
 import TipBox from './tipBox';
+import { Button } from 'reactstrap';
+
 const jwtDecode = require('jwt-decode');
 
 class NewParty extends React.Component {
@@ -93,6 +95,9 @@ return (
 								<br />
 								<input type="submit" value="Submit" />
 								<Link to={`/new-party/question-1`}>Next</Link>
+								<button type="button" className="btn btn-primary">Primary</button>
+								<Button color="danger">Danger!</Button>
+
 						</div>}/>
 						
 			{questionsList.map((question, index)=> {
