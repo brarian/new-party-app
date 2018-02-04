@@ -28,27 +28,44 @@ class NewUserRegistration extends React.Component {
 		
 		return (
 			<div>
-				<div className="party-box">
-				<h1>Create a New Account</h1>
-				
-					<section className="login-style">
-						<label> First Name</label>
-						<input type="text" name="firstName"  onChange = {this.onChange} required/>
-						<br />
-						<label> Last Name</label>
-						<input type="text" name="lastName"  onChange = {this.onChange} required/>
-						<br />
-						<label> Email</label>
-						<input type="email"  name="email"  onChange = {this.onChange} required/>
-						<br />
-						<label> Username</label>
-						<input type="text"  name="userName"   onChange = {this.onChange} required/>
-						<br />
-						<label>Create a Password</label>
-						<input type="password" name="password"   onChange = {this.onChange} required/>
-						<button onClick={this.handleClick}>CREATE MY ACCOUNT</button>
-					</section>
-				</div>
+				<div class="row">
+          <div class="small-12 medium-6 medium-offset-3 columns">
+            <form>
+              <div>
+                <div class="row">
+                  <div className="medium-12 columns">
+                    <label>First Name
+										<input type="text" name="firstName"  onChange = {this.onChange} required/>
+                    </label>
+                  </div>
+                  <div className="medium-12 columns">
+                    <label>Last Name
+										<input type="text" name="lastName"  onChange = {this.onChange} required/>
+                    </label>
+                  </div>
+									<div className="medium-12 columns">
+                    <label>Email
+										<input type="email"  name="email"  onChange = {this.onChange} required/>
+                    </label>
+                  </div>
+									<div className="medium-12 columns">
+                    <label>Username
+										<input type="text"  name="userName"   onChange = {this.onChange} required/>
+                    </label>
+                  </div>
+									<div className="medium-12 columns">
+                    <label>Create a Password
+										<input type="password" name="password"   onChange = {this.onChange} required/>
+                    </label>
+                  </div>
+                  <div className="medium-12 columns">
+                    <button className="button" onClick={this.handleClick}>CREATE MY ACCOUNT</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 			</div>
 		)
 	}

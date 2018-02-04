@@ -1,0 +1,11 @@
+@import 'scss/settings';
+@import '../node_modules/foundation-sites/scss/foundation';
+@include foundation-everything;
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-grid;
+@include foundation-flex-grid;
+@import 'scss/component/navigationBar';
+@import 'scss/component/newParty';
+@import 'scss/component/login';
+@import 'scss/component/landingPage';

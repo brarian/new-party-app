@@ -1,4 +1,5 @@
-/* change fonts  */
+
+/* change fonts 
 
 h1{
   padding-top: 15px;
@@ -16,7 +17,7 @@ body {
     "party-box";
   background-color: white;
   /* padding: 20px; */
-  margin: 0;
+  /* margin: 0;
 }
 
 h1, h2, p, ul, li {
@@ -27,7 +28,7 @@ h1, h2, p, ul, li {
   color: blue;
   background-color: lightcoral;
 } */
-
+/* 
 ul.header li {
   grid-area: "header";
   display: inline;
@@ -84,28 +85,10 @@ ul.header li {
   width: 140px;
   text-align: right;
   padding: 4px;
-}​
+}​ */
 
-.party-box .login-style input {
-  width: 200px;
-}
-.landingBox{
-  grid-area: "party-box";
-  background-color: #F0F8FF	;
-  padding-bottom: 120px;
-  text-align: center;
-}
 
-.landingPic img{
-  width: 552px;
-  height: 800px;
-  z-index: 1;
-  /* background-color: ;
-  background-repeat: no-repeat, repeat;
-  background-image: url("./images/blankSlate.jpg");
-  background-blend-mode: multiply; */
-}
-.tipBox{
+/* .tipBox{
 border: 1px solid blue;
 width: 450px;
 height: 100px;
@@ -121,7 +104,7 @@ input{
   display: flex;
   justify-content: space-around;
   z-index: 2;
-}
+} */
 /*
 .party-box h2 {
   padding: 0;
@@ -195,4 +178,4 @@ h1{
 padding-top: 15px;
 text-align: center;
 margin: 15px;
-} */ {}
+} */ 

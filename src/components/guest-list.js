@@ -27,7 +27,9 @@ handleChange= (e) => {
  render() {
   return ( 
     <div> 
-      <TipBox tips="be mindful of how many people and whom you invite"/>
+      <div className="row party-box"> 
+        <div className="small-12 medium-6 medium-offset-3 columns">
+      <TipBox tips=""/>
 
       <h3>{this.props.title}</h3>
       <form >
@@ -35,6 +37,8 @@ handleChange= (e) => {
         <button type="button" onClick={this.handleSubmit.bind(this)}>Add a Guest</button>
       </form>
       <List guests = {this.state.guestsList} /> 
+        </div>
+      </div>
     </div>
   );
  }

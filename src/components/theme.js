@@ -24,7 +24,9 @@ class Theme extends React.Component {
  render() {
 		 return (
 			 <div>
-				 <TipBox tips="Is there a holiday or celebration you're throwing this party for, keep it in mind"/>
+				<div class="row party-box"> 
+       			 <div class="small-12 medium-6 medium-offset-3 columns">
+				 <TipBox tips=""/>
 
 				<h3>{this.props.title}</h3>
 				 <select onChange={this.handleChange}>
@@ -34,6 +36,8 @@ class Theme extends React.Component {
 				 </select>
 				 {this.state.value === "Yes"? <ThemeLabel /> : ''}
 			 </div>
+			</div>
+			</div>
 		 )
 	 }
  }

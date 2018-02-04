@@ -4,45 +4,51 @@ import {
   } from 'react-router-dom';
 import NewParty from './newParty';
 import Profile from './user-profile';
+import '../index.css'
 const NavigationBar = () =>{
   const token = window.localStorage.getItem("token")
   if(token){
   return(
-  <div>
-    <nav className="navigation" role="navigation">
-      <ul className="header">
-        <li>LOGO </li>
-        <li><Link to="/new-party" >New Party </Link></li>
-        <li><Link to="/profile" >Profile </Link></li>
-        <li><Link to="/logOut"    >logOut </Link></li>
-        <li><Link to="/about"  >About </Link></li>
-        <li><Link to="/newUser"  >New User</Link></li>
-        <li> <Link to="/logIn"   >logIn </Link></li>
-        
-
-      </ul>
-    </nav>
-  </div>
-)}
-else {
-  return(
     <div>
-    <nav className="navigation" role="navigation">
-      <ul className="header">
-        <li>LOGO </li>
-        <li><Link to="/about"  >About </Link></li>
-        <li><Link to="/newUser"  >New User</Link></li>
-        <li> <Link to="/logIn"   >logIn </Link></li>
+    <div className="top-bar">
+      <div className="top-bar-left">
+        <ul className="dropdown menu" data-dropdown-menu>
+          <li className="menu-text">Site Title</li>
+        </ul>
+      </div>
+      <div className="top-bar-right">
+        <ul className="dropdown menu" data-dropdown-menu>
+          <li><Link to="/new-party">New Party </Link></li>
+          <li><Link to="/profile">Profile </Link></li>
+          <li><Link to="/logOut">log Out </Link></li>
+  
+        </ul>
+      </div>
+    </div>
+</div>
+  
+)}
+else 
+  return(
 
-      </ul>
-    </nav>
-  </div>
+        <div>
+        <div className="top-bar">
+          <div className="top-bar-left">
+            <ul className="dropdown menu" data-dropdown-menu>
+              <li className="menu-text">Site Title</li>
+            </ul>
+          </div>
+          <div className="top-bar-right">
+            <ul className="dropdown menu" data-dropdown-menu>
+            <li><Link to="/about">About </Link></li>
+            <li><Link to="/newUser">New User</Link></li>
+            <li> <Link to="/logIn">log In </Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
   )
 }
-}
-export default NavigationBar;
+ 
 
-
-
-  
-  
+export default NavigationBar

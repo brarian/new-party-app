@@ -20,7 +20,9 @@ class Menu extends React.Component {
  render(){
 	 return (
 		<div>
-			<TipBox tips="you just need to make a few things"/>
+			<div className="row">
+			<div className="small-12 medium-6 medium-offset-3 columns">
+			<TipBox tips=""/>
 
 			<h3>{this.props.title}</h3>
 			<form>
@@ -45,6 +47,8 @@ class Menu extends React.Component {
 				</label>
 				<button type="submit" onClick={this.handleSubmit}>Submit</button>
 			</form>
+		</div>
+		</div>
 		</div>
 	 );
  }

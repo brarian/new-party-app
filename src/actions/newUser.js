@@ -5,7 +5,7 @@ import axios from 'axios';
 const newUserAction = (credentials) => {
   return (dispatch) => {
     
-    return axios.post(`${API_BASE_URL}/users/`, credentials)
+   return  axios.post(`${API_BASE_URL}/users/`, credentials)
     .then((user)=> {
       const { token } = user.data;
       window.localStorage.setItem('token', token)

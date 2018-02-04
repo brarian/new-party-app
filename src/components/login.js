@@ -34,19 +34,31 @@ class Login extends React.Component {
     }
     return (
       <div>
-        <div className="party-box">
-        <h1>Sign Into Your Account</h1>
-          <section className="login-style">
-            <label> username</label>
-            <input type="text" name="userName" onChange = {this.onChange.bind(this)} required/>
-            <br/>
-            <label>password</label>
-            <input type="password" name="password" onChange = {this.onChange.bind(this)} required/>
-            <br />
-            <button onClick={this.handleClick.bind(this)} >SIGN IN</button>
-          </section>
+
+        <div class="row party-box">
+          <div class="small-12 medium-6 medium-offset-3 columns">
+            <form>
+              <div>
+                <div class="row">
+                  <div className="medium-12 columns">
+                    <label>username
+                      <input type="text" name="userName" onChange = {this.onChange.bind(this)} required/>
+                    </label>
+                  </div>
+                  <div className="medium-12 columns">
+                    <label>password
+                      <input type="password" name="password" onChange = {this.onChange.bind(this)} required/>
+                    </label>
+                  </div>
+                  <div className="medium-12 columns">
+                    <button className="button" onClick={this.handleClick.bind(this)}>SIGN IN</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+     </div>
     )
   }
 } 

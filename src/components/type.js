@@ -28,6 +28,8 @@ handleClick(e){
 render() {
 	return (
 		<div>
+			<div className="row">
+				<div class="small-12 medium-6 medium-offset-3 columns">
 			<h3>{this.props.title}</h3>
 			<select onChange={this.handleChange.bind(this)}>
 				<option value="">party option</option>
@@ -40,6 +42,8 @@ render() {
 				<SpecQuestion key={index} handleSubQuestionChange={this.handleSubQuestionChange.bind(this)} question={question} />))}
 				<button onClick={this.handleClick.bind(this)}>Submit </button> </div>: ''}
 
+		</div>
+		</div>
 		</div>
 	)
 	}

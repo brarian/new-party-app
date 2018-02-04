@@ -3,13 +3,14 @@ import { API_BASE_URL } from '../config';
 import axios from 'axios';
 
 
-const partyDataAction = (userId) => {
+const partyDataAction = (formData) => {
 	return(dispatch) => {
-		return axios.post(`${API_BASE_URL}/party/${userId}`, userId)
+		return axios.post(`${API_BASE_URL}/party/`, formData)
 		.then((response) => {
+			//console.log("ACTION RESPPONSE", response)
 			return dispatch({
 				type: actionTypes.PARTY_DATA, 
-				payload: response.party
+				payload: response.data.party
 			})
 		}).catch((error) => {
 			console.log(error)

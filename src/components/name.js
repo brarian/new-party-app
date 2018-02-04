@@ -8,10 +8,14 @@ class Name extends React.Component {
 	render() {
 		return ( 
 			<div> 
-				<TipBox tips="A name to commemorate this event"/>
+				<div className="row">
+				<div className="small-12 medium-6 medium-offset-3 columns">
+				<TipBox tips=""/>
 
 				<h3>{this.props.title}</h3>
 				<input name="name" type="text"  onChange={this.props.handleChange} />
+			</div>
+			</div>
 			</div>
 		);
 	}

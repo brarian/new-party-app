@@ -10,11 +10,13 @@ class Date extends React.Component {
 	render() {
 		return (
 		<div> 
-			<TipBox tips="give yourself at least 2 weeks to plan the party"/>
-			<Button color="danger">Danger!</Button>
-
-			<h3>{this.props.title}</h3>
-			<input name="date" type="date" onChange={this.props.handleChange} />
+			<div className="row">
+          	<div className="small-12 medium-6 medium-offset-3 columns">
+				<TipBox tips=""/>
+				<h3>{this.props.title}</h3>
+				<input name="date" type="date" onChange={this.props.handleChange} />
+			</div>
+			</div>
 		</div>
 
 		);
