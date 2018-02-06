@@ -1,9 +1,6 @@
 import React from 'react';
 import TipBox from './tipBox';
 class Name extends React.Component {
-	constructor(props){
-		super(props)
-	}
 
 	render() {
 		return ( 

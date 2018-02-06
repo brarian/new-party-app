@@ -2,9 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom'; 
 
 class LogOut extends React.Component {
-	constructor(props){
-		super(props)
-    }
+	// constructor(props){
+	// 	super(props)
+    // }
     componentDidMount(){
         window.localStorage.clear('token');        
     }

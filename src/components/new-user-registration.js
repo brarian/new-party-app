@@ -29,37 +29,37 @@ class NewUserRegistration extends React.Component {
 		return (
 			<div>
 				<div class="row">
-          <div class="small-12 medium-6 medium-offset-3 columns">
+          <div class="small-12 medium-8">
             <form>
               <div>
                 <div class="row">
-                  <div className="medium-12 columns">
+                  <div className=" small-12 medium-8 medium-offset-3  columns">
                     <label>First Name
 										<input type="text" name="firstName"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-                  <div className="medium-12 columns">
+                  <div className="small-12 medium-8 medium-offset-3 columns">
                     <label>Last Name
 										<input type="text" name="lastName"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="medium-12 columns">
+									<div className="small-12 medium-8 medium-offset-3  columns">
                     <label>Email
 										<input type="email"  name="email"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="medium-12 columns">
+									<div className="small-12 medium-8  medium-offset-3 columns">
                     <label>Username
 										<input type="text"  name="userName"   onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="medium-12 columns">
+									<div className="small-12 medium-8 medium-offset-3 columns">
                     <label>Create a Password
 										<input type="password" name="password"   onChange = {this.onChange} required/>
                     </label>
                   </div>
-                  <div className="medium-12 columns">
-                    <button className="button" onClick={this.handleClick}>CREATE MY ACCOUNT</button>
+                  <div className="small-12 medium-8 medium-offset-3 columns">
+                    <button className="button small-12 medium-8 medium-offset-3 " onClick={this.handleClick}>CREATE MY ACCOUNT</button>
                   </div>
                 </div>
               </div>

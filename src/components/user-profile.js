@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'; 
-import partyDataAction from '../actions/partyData';
+// import { withRouter } from 'react-router-dom'; 
+import getPartyDataAction from '../actions/getPartyAction';
+
 const jwtDecode = require('jwt-decode');
 
 class Profile extends React.Component {
@@ -19,12 +20,17 @@ class Profile extends React.Component {
 			this.props.history.push('/login')
 		}
 		const userData = jwtDecode(token);
-		this.setState({ userData });
+		console.log(userData)
+
+		this.setState(userData)
 		this.props.profile(userData.userId)
-			// .then(() => {
-			// 	this.setState({ partyData: this.props.partyData })
-			// });
-		// console.log('props', this.props.partyData);
+		console.log(userData.userName);
+		//this.setState({ userData });
+		// this.props.profile(userData.userId)
+		// 	.then(() => {
+				
+		// 	});
+		console.log('props', this.props.partyData);
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -32,20 +38,19 @@ class Profile extends React.Component {
 	};
 
 	render() {
-		console.log(this.state.partyData, 'state');
 		return (
 			<div>
 				<div className="party-box">
-				<h1>Profile</h1>
+				
 					<ul>
-						<div> <strong>Name:</strong> {this.state.userData.userName}</div>
-						<div> <strong>Email:</strong> {this.state.userData.email}</div>
+						<div> <strong>Name:</strong> {this.state.userName}</div>
+						<div> <strong>Email:</strong> {this.state.email}</div>
 						<br />
 						{/* component that renders recent parties */}
 						{ 
-							this.state.partyData.map(party =>{
+							this.props.partyData.map((party, index )=>{
 								return (
-									<div className="small-box" >
+									<div key={index} className="small-box" >
 										<div> <strong>Party Name:</strong> {party.name} </div>
 										<div> <strong>Party Date:</strong> {party.date}</div>
 										<div> <strong>Party Time:</strong> {party.time}</div>
@@ -63,13 +68,13 @@ class Profile extends React.Component {
 
 const mapStoreToProps = (store) => {
 	return {
-		partyData: store.partyDataReducer 
+		partyData: store.partyDataReducer.parties || [] 
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		profile: (userId) => dispatch(partyDataAction(userId))
+		profile: (userId) => dispatch(getPartyDataAction(userId))
 	}
 }
 

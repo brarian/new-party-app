@@ -1,5 +1,6 @@
+// uncomment 39-42
 import React from 'react';
-import {Route, Link, Switch} from 'react-router-dom'; 
+import { Route } from 'react-router-dom'; 
 import {questionsList} from './dummy-data';
 import DateComponent from './date';
 // import Moment from 'react-moment';
@@ -13,10 +14,8 @@ import {connect} from 'react-redux';
 import Name from './name';
 import { withRouter } from 'react-router-dom'; 
 import Moment from 'moment';
-import TipBox from './tipBox';
-import { Button } from 'reactstrap';
+// import TipBox from './tipBox';
 import '../index.css'
-const jwtDecode = require('jwt-decode');
 
 class NewParty extends React.Component {
   constructor(props) {
@@ -24,19 +23,16 @@ class NewParty extends React.Component {
 		this.state = { 
 			name: '',
 			date: '',
-			// use moment to save date and subtract 24hours, then render the last set of questions 
 			time: '',
-			// need take menu out of state if the submit button will save state 
 			menu: {},
 			number: 0,
-			// need take menu out of state if the submit button will save state 
 			bigGuestList: {},
 			userId: ''
         }
 	}
 	componentWillMount(){
 		const token = window.localStorage.getItem('token');
-		this.setState({ userId: jwtDecode(token).userId });
+		// this.setState({ userId: jwtDecode(token).userId });
 		if (!token){
 			this.props.history.push('/login')
 		}
@@ -44,7 +40,6 @@ class NewParty extends React.Component {
 	onChange = (e, value) => {
 		if(typeof e === "string"){
 			this.setState({[e]: value}, () => {
-				console.log("========I came here==========>", value, this.state)
 			});
 			return null;
 		}
@@ -73,11 +68,9 @@ class NewParty extends React.Component {
 	}
 
 	render() {
-		console.log(this.state)
 			return (
 				<div>
 					<div className="party-box">
-						<h1>Dinner Party</h1>
 					</div>
 					<Questions number={this.state.number} onChange={this.onChange.bind(this)} handleButtonClick={this.handleButtonClick.bind(this)}/>
 				</div>
@@ -94,17 +87,19 @@ return (
 						<div> 
 								<br />
 								<input type="submit" value="Submit" />
-								<div className="button">
-                    				<Link className="button large" to={`/new-party/question-1`}>Next</Link>
-                  				</div>	
+								{/* <div className="button">
+                    				<Link  to={`/new-party/question-1`}>Next</Link>
+									<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large"><Link  to={`/new-party/question-1`}>Next</Link></button>
+
+                  				</div>	 */}
 						</div>}/>
 						
 			{questionsList.map((question, index)=> {
 			if (props.number === index) {
-					return (<div>   
+					return (<div key={index}>   
 							<Question index={index} question={question} onChange={props.onChange}/>
 							<br />
-								<button onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
+								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large" onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
 						</div>)
 						}}
 				)
@@ -134,51 +129,49 @@ return (
 )
 }
 
-class List extends React.Component {
-constructor(props){
-	super(props);
-		this.state = {
-			guests: [],
-			guest: ""
-		}
-	}   
+// class List extends React.Component {
+// constructor(props){
+// 	super(props);
+// 		this.state = {
+// 			guests: [],
+// 			guest: ""
+// 		}
+// 	}   
 
-	onChange = (e) => {
-		e.preventDefault();
-		this.setState({
-			guest: e.target.value,
-		});
-	}
+// 	onChange = (e) => {
+// 		e.preventDefault();
+// 		this.setState({
+// 			guest: e.target.value,
+// 		});
+// 	}
 
-	onSubmit = (e) => {
-		e.preventDefault();
-		if(this.state.guest){
-			const guests = this.state.guests;
-			guests.push(this.state.guest);
-			this.setState({
-				guests,
-			})
-		}
-	}
-	render() {
-		return (
-			<div>
-				{/* <input type="text" onChange={this.onChange.bind(this)} /> */}
-				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
-				<ul className="list">
-						{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
-				</ul>
-			</div>
-		)
-	}
-}
+// 	onSubmit = (e) => {
+// 		e.preventDefault();
+// 		if(this.state.guest){
+// 			const guests = this.state.guests;
+// 			guests.push(this.state.guest);
+// 			this.setState({
+// 				guests,
+// 			})
+// 		}
+// 	}
+// 	render() {
+// 		return (
+// 			<div>
+// 				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
+// 				<ul className="list">
+// 						{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
+// 				</ul>
+// 			</div>
+// 		)
+// 	}
+// }
 
 const mapStoretoProps = (store) => {
 	console.log(store);
 	return { 
 		submitResponse: store.submitReducer.submitResponse,
 		eventData: store.submitReducer.eventData,
-		// userData: store
 	}
 }
 

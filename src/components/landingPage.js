@@ -1,12 +1,11 @@
 import React from 'react';
-import blankSlate from '../images/blankSlate.jpg';
-import WebFont from 'webfontloader';
-import cheers from '../images/cheers.jpg'
-WebFont.load({
-  google: {
-    families: ['Titillium Web:300,400,700', 'sans-serif']
-  }
-});
+import cheers from '../images/cheers.jpg';
+import balloon from '../images/balloon.png';
+import pencil from '../images/pencil.png';
+import execute from '../images/execute.png';
+import {
+	Link
+} from 'react-router-dom';
 class LandingPage extends React.Component {
 
 
@@ -14,10 +13,12 @@ class LandingPage extends React.Component {
 		return (
 			<div >
 <div className="small-12 medium-6 columns landing-bg"></div>
-<img src={cheers} id="bg" alt="people cheer'sing with drinks"/>>
-<div className="text"> Easy Event Planning</div>
-
-
+<div>
+<img src={cheers} id="bg" alt="people cheer'sing with drinks"/>
+</div>
+<h1>
+	party planning made easy
+</h1>
 						 {/* <div className="boxed">
 								<h1 > -- 1 --</h1>
 								<h2>Plan a party that suits you taste, budget and style</h2>
@@ -29,6 +30,27 @@ class LandingPage extends React.Component {
 							<div className="boxed">
 								<h1 > -- 3 --</h1>
 								<h2>Enjoy entertaining, another line which will make the divs</h2>
+							</div> */}
+							<div >
+								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large"> <Link to="/newUser">Join Us!</Link></button>
+							</div>
+
+							<div class="row small-up-1 small-offset-3 medium-up-3 medium-offset-1 symbol">
+								<div class="column"><img src={pencil} alt="icon of a pencil" className="sym"/><p>1. Plan  </p></div>
+								<div class="column "><img src={execute} alt="icon of a checklist" className="sym"/><p>2. Execute</p></div>
+								<div class="column "><img src={balloon} alt="icon of a balloon" className="sym"/><p>3. Enjoy </p></div>
+							</div>
+							{/* <div className="symbol">
+								<div >
+									
+								</div>
+								<div>
+									
+								</div>
+								<div>
+									<img src={balloon} className="sym"/>
+								</div>
+
 							</div> */}
 			</div>
 			)

@@ -1,4 +1,3 @@
-import jwtDecode from 'jwt-decode';
 import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
 import axios from 'axios';

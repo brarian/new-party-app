@@ -2,8 +2,8 @@ import React from 'react';
 import {
     Link
   } from 'react-router-dom';
-import NewParty from './newParty';
-import Profile from './user-profile';
+// import NewParty from './newParty';
+// import Profile from './user-profile';
 import '../index.css'
 const NavigationBar = () =>{
   const token = window.localStorage.getItem("token")
@@ -21,7 +21,6 @@ const NavigationBar = () =>{
           <li><Link to="/new-party">New Party </Link></li>
           <li><Link to="/profile">Profile </Link></li>
           <li><Link to="/logOut">log Out </Link></li>
-  
         </ul>
       </div>
     </div>

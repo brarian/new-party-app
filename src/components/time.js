@@ -1,9 +1,7 @@
 import React from 'react';
 import TipBox from './tipBox';
 class Time extends React.Component {
-	constructor(props){
-		super(props)
-	}
+
 	render() {
 		//find another time input
 		return (

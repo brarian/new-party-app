@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
     Route,
-    Link
+    // Link
   } from 'react-router-dom';
 import NewParty from './components/newParty';
 import Profile from './components/user-profile';
