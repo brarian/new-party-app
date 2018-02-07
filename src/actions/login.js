@@ -3,7 +3,6 @@ import { API_BASE_URL } from '../config';
 import axios from 'axios';
 
 const loginAction = (credentials) => {
-    //more API stuff another response 
   return (dispatch) => {
     return axios.post(`${API_BASE_URL}/login`, credentials)
     .then((user) => {

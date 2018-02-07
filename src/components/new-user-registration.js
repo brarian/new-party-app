@@ -28,11 +28,11 @@ class NewUserRegistration extends React.Component {
 		
 		return (
 			<div>
-				<div class="row">
-          <div class="small-12 medium-8">
+				<div className="row">
+          <div className="small-12 medium-8">
             <form>
               <div>
-                <div class="row">
+                <div className="row">
                   <div className=" small-12 medium-8 medium-offset-3  columns">
                     <label>First Name
 										<input type="text" name="firstName"  onChange = {this.onChange} required/>

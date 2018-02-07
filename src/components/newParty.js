@@ -70,7 +70,7 @@ class NewParty extends React.Component {
 	render() {
 			return (
 				<div>
-					<div className="party-box">
+					<div>
 					</div>
 					<Questions number={this.state.number} onChange={this.onChange.bind(this)} handleButtonClick={this.handleButtonClick.bind(this)}/>
 				</div>
@@ -82,7 +82,7 @@ class NewParty extends React.Component {
 //use functional components when we dont have any internal state OR when we aren't working with lifecycle methods (didMount, willunmount etc)
 const Questions = (props) => {
 return (
-	<div className="party-box">
+	<div className="party-box ">
 		<Route path="/new-party/question"  render={props =>                     
 						<div> 
 								<br />
@@ -101,7 +101,10 @@ return (
 							<br />
 								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large" onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
 						</div>)
-						}}
+						}
+						return null
+				} 
+						
 				)
 		}
 	</div>

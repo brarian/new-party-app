@@ -1,5 +1,4 @@
 import React from 'react';
-import TipBox from './tipBox';
 class GuestListForm extends React.Component {
  constructor(props) {
   super(props);
@@ -8,7 +7,7 @@ class GuestListForm extends React.Component {
    guestsList: []
   };
  }
-
+// don't put a height on this box
 handleSubmit = (e) => {
   e.preventDefault()
   this.setState({
@@ -27,17 +26,26 @@ handleChange= (e) => {
  render() {
   return ( 
     <div> 
-      <div className="row party-box"> 
-        <div class="small-12 medium-6 medium-offset-3 columns">
-      <TipBox tips=""/>
+      <div className="row"> 
+        <div className="small-12 medium-8 columns main">
+         
 
-      <h3>{this.props.title}</h3>
-      <form >
-        <input type="text" onChange={this.handleChange.bind(this)} />
-        <button type="button" onClick={this.handleSubmit.bind(this)}>Add a Guest</button>
-      </form>
-      <List guests = {this.state.guestsList} /> 
+          <h3>{this.props.title}</h3>
+            <form >
+              <input type="text" onChange={this.handleChange.bind(this)} />
+              <button type="button" onClick={this.handleSubmit.bind(this)}>Add a Guest</button>
+            </form>
+          <List guests = {this.state.guestsList} /> 
         </div>
+        <div className="small-12 medium-3 columns aside">
+          <div className="tipTitle"> group dynamics </div>
+            <div>Your guests don't need to know one another,
+              but they should be able to socialize in a mixed group if they don't. 
+              And, of course, don't invite friends who get along poorly with
+                one another to the same party–that is unless you intend to
+                make their hostility be the main event.
+            </div>
+		  	</div>
       </div>
     </div>
   );

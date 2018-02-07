@@ -40,7 +40,7 @@ class Profile extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="party-box">
+				<div className="party-box ">
 				
 					<ul>
 						<div> <strong>Name:</strong> {this.state.userName}</div>
@@ -61,6 +61,8 @@ class Profile extends React.Component {
 						}
 					</ul>
 				</div>
+				<div className="medium-4">different box</div>
+
 			</div>
 		)
 	}

@@ -34,11 +34,12 @@ class LandingPage extends React.Component {
 							<div >
 								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large"> <Link to="/newUser">Join Us!</Link></button>
 							</div>
-
-							<div class="row small-up-1 small-offset-3 medium-up-3 medium-offset-1 symbol">
-								<div class="column"><img src={pencil} alt="icon of a pencil" className="sym"/><p>1. Plan  </p></div>
-								<div class="column "><img src={execute} alt="icon of a checklist" className="sym"/><p>2. Execute</p></div>
-								<div class="column "><img src={balloon} alt="icon of a balloon" className="sym"/><p>3. Enjoy </p></div>
+							<div>
+							<div className="grid-x small-up-1 small-offset-3 medium-up-3 medium-offset-1 symbol">
+								<div className="column"><img src={pencil} alt="icon of a pencil" className="sym"/><p>1. Plan  </p></div>
+								<div className="column "><img src={execute} alt="icon of a checklist" className="sym"/><p>2. Execute</p></div>
+								<div className="column "><img src={balloon} alt="icon of a balloon" className="sym"/><p>3. Enjoy </p></div>
+							</div>
 							</div>
 							{/* <div className="symbol">
 								<div >
