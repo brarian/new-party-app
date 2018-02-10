@@ -20,17 +20,14 @@ class Profile extends React.Component {
 			this.props.history.push('/login')
 		}
 		const userData = jwtDecode(token);
-		console.log(userData)
 
 		this.setState(userData)
 		this.props.profile(userData.userId)
-		console.log(userData.userName);
 		//this.setState({ userData });
 		// this.props.profile(userData.userId)
 		// 	.then(() => {
 				
 		// 	});
-		console.log('props', this.props.partyData);
 	}
 
 	componentWillReceiveProps(nextProps) {

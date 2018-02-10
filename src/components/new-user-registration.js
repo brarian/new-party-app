@@ -10,13 +10,13 @@ class NewUserRegistration extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	onChange = (e) => {
+	onChange(e){
 		e.preventDefault();
 		this.setState({
 		  [e.target.name] : e.target.value
 		});
 	  }
-	  handleClick = (e) => {
+	  handleClick(e){
 		e.preventDefault();
 		this.props.signUp(this.state);
 		//submit form 

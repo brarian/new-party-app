@@ -1,5 +1,4 @@
 import React from "react";
-import TipBox from './tipBox';
 
 class Menu extends React.Component {
  constructor(props) {
@@ -22,7 +21,6 @@ class Menu extends React.Component {
 		<div>
 			<div className="row">
 			<div className="small-12 medium-6 medium-offset-3 columns">
-			<TipBox tips=""/>
 
 			<h3>{this.props.title}</h3>
 			<form>

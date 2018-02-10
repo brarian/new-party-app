@@ -52,9 +52,7 @@ describe('partyData', () => {
         }];
 
         const store = mockStore({ party: {} })
-
         return store.dispatch(partyDataAction(response)).then((response) => {
-            console.log(response)
             expect(store.getActions()).toEqual(expectedActions);
         });
     })

@@ -1,6 +1,8 @@
+/* eslint-disable */
+
+import axios from 'axios';
 import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
-import axios from 'axios';
 
 const loginAction = (credentials) => {
   return (dispatch) => {
@@ -10,10 +12,10 @@ const loginAction = (credentials) => {
       window.localStorage.setItem('token', token)
       return dispatch({
         type: actionTypes.LOGIN_SUCESSFUL,
-        payload: { token }
+        payload:  token 
       })
     }).catch((error) => {
-      console.log(error)
+      Console.log(error);
     })
   }
 }

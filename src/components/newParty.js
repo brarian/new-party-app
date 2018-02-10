@@ -1,7 +1,7 @@
-// uncomment 39-42
+/* eslint-disable */
 import React from 'react';
 import { Route } from 'react-router-dom'; 
-import {questionsList} from './dummy-data';
+import questionsList from './dummy-data';
 import DateComponent from './date';
 // import Moment from 'react-moment';
 import Theme from './theme';
@@ -37,7 +37,7 @@ class NewParty extends React.Component {
 			this.props.history.push('/login')
 		}
 	}
-	onChange = (e, value) => {
+	onChange(e, value){
 		if(typeof e === "string"){
 			this.setState({[e]: value}, () => {
 			});
@@ -49,7 +49,7 @@ class NewParty extends React.Component {
 }
 
 //!!! work on this!!!! this is what will have to go in the action, 
-	handleButtonClick = (e) => {
+	handleButtonClick(e){
 			if(this.state.number=== 0){
 				const date = new Date(this.state.date);
 				const now = new Date();
@@ -115,16 +115,14 @@ const Question = (props) => {
 return (
 	<div>
 		<label>
-			{props.index === 0? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "} 
-
-			{props.index === 1? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 
-			
-			{props.index === 2? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
-			{props.index === 3? <div><Theme title={props.question.title} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 4? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 5? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 0? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 1? <div><Theme title={props.question.title} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 2? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "}
+			{props.index === 3? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 4? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
+			{props.index === 5? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
-			{props.index > 6? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
+			{props.index > 7 ? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
 
 			
 		</label>

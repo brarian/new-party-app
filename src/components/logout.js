@@ -6,11 +6,11 @@ class LogOut extends React.Component {
 	// 	super(props)
     // }
     componentDidMount(){
-        window.localStorage.clear('token');        
+        window.localStorage.clear('token');
+        this.props.history.push('/login');        
     }
 
 	render() {
-        this.props.history.push('/login');
 		return <div> Log Out</div>;
 	}
 }

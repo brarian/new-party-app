@@ -5,6 +5,7 @@ import {
 // import NewParty from './newParty';
 // import Profile from './user-profile';
 import '../index.css'
+
 const NavigationBar = () =>{
   const token = window.localStorage.getItem("token")
   if(token){
@@ -12,8 +13,8 @@ const NavigationBar = () =>{
     <div>
     <div className="top-bar">
       <div className="top-bar-left">
-        <ul className="dropdown menu" data-dropdown-menu>
-          <li className="menu-text">Site Title</li>
+        <ul>
+          <li className="menu-text">Little Mixer</li>
         </ul>
       </div>
       <div className="top-bar-right">
@@ -28,13 +29,13 @@ const NavigationBar = () =>{
   
 )}
 else 
-  return(
+  {return(
 
         <div>
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="dropdown menu" data-dropdown-menu>
-              <li className="menu-text">Site Title</li>
+              <li className="menu-text">Little Mixer</li>
             </ul>
           </div>
           <div className="top-bar-right">
@@ -46,7 +47,7 @@ else
           </div>
         </div>
       </div>
-  )
+  )}
 }
  
 

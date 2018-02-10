@@ -24,12 +24,13 @@ handleClick(e){
 	this.props.handleChange("subquestion", this.state)
 }
 
-// index.js:2177 Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>.
+// index.js:2177 Warning: Use the `defaultValue` or `value` props on 
+//<select> instead of setting `selected` on <option>.
 render() {
 	return (
 		<div>
 			<div className="row">
-				<div class="small-12 medium-6 medium-offset-3 columns">
+				<div className="small-12 medium-6 medium-offset-3 columns">
 			<h3>{this.props.title}</h3>
 			<select onChange={this.handleChange.bind(this)}>
 				<option value="">party option</option>
@@ -38,9 +39,12 @@ render() {
 				<option value="potluck">Potluck</option>
 			</select>
 
-			{this.state.subQuestionType? <div>{this.props.subQuestions[this.state.subQuestionType].map((question, index) =>(
-				<SpecQuestion key={index} handleSubQuestionChange={this.handleSubQuestionChange.bind(this)} question={question} />))}
-				<button onClick={this.handleClick.bind(this)}>Submit </button> </div>: ''}
+			{/* {this.state.subQuestionType? <div>{this.props.subQuestions
+			[this.state.subQuestionType].map((question, index) =>(
+			<SpecQuestion key={index} handleSubQuestionChange=
+			{this.handleSubQuestionChange.bind(this)} question={question} />))}
+			<button onClick={this.handleClick.bind(this)}>Submit
+			 </button> </div>: ''} */}
 
 		</div>
 		</div>
