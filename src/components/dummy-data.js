@@ -8,10 +8,10 @@ const questionsList = [
     title: `Party Time?`,
   },
   {
-    title: `Who's invited?`,
+    title: `Party Date?`,
   },
   {
-    title: `The theme, if there is one?`,
+    title: `Party Time?`,
   },
   {
     title: `What would you like to name this party?`,

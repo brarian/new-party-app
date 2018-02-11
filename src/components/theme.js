@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import TipBox from './tipBox';
 
@@ -24,11 +26,10 @@ class Theme extends React.Component {
  render() {
 		 return (
 			 <div>
-				<div className="row party-box"> 
-       			 <div className="small-12 medium-6 medium-offset-3 columns">
-				 <TipBox tips=""/>
+				<div className="row"> 
+       			 <div className="small-12 medium-8 columns main">
 
-				<h3>{this.props.title}</h3>
+				<h3>Do you have a theme? </h3>
 				 <select onChange={this.handleChange}>
 				 	<option value="">theme option</option>
 					 <option value="No">No Theme</option>
@@ -36,7 +37,20 @@ class Theme extends React.Component {
 				 </select>
 				 {this.state.value === "Yes"? <ThemeLabel /> : ''}
 			 </div>
+			 <div className="small-12 medium-3 columns aside">
+			 <div className="tipTitle"> On Themes</div>
+			 When planning your party, it helps to choose a theme. 
+			 This doesn't mean all your guests have to show up dressed 
+			 like pirates or their favorite movie stars—a theme can 
+			 be discreet, such as a flavor or color that is present 
+			 throughout the entire evening. A creative theme can make your party 
+			 feel special without adding to your budget, and it will help you come up 
+			 with ideas for food, drinks, and decorations.
+
+
 			</div>
+			</div>
+			
 			</div>
 		 )
 	 }

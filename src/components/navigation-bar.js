@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import {
     Link
@@ -5,6 +7,8 @@ import {
 // import NewParty from './newParty';
 // import Profile from './user-profile';
 import '../index.css'
+import logos from '../images/logos.png';
+
 
 const NavigationBar = () =>{
   const token = window.localStorage.getItem("token")
@@ -14,7 +18,7 @@ const NavigationBar = () =>{
     <div className="top-bar">
       <div className="top-bar-left">
         <ul>
-          <li className="menu-text">Little Mixer</li>
+        <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
         </ul>
       </div>
       <div className="top-bar-right">
@@ -35,7 +39,7 @@ else
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="dropdown menu" data-dropdown-menu>
-              <li className="menu-text">Little Mixer</li>
+            <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
             </ul>
           </div>
           <div className="top-bar-right">

@@ -15,7 +15,7 @@ const loginAction = (credentials) => {
         payload:  token 
       })
     }).catch((error) => {
-      Console.log(error);
+      console.log(error);
     })
   }
 }

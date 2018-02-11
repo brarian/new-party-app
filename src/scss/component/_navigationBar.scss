@@ -7,3 +7,21 @@
 .menu-text {
     list-style: none;
 }
+.top-bar {
+    background-color: #e9c904;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+
+    .top-bar ul {
+        background-color: #e9c904;
+    }
+}
+
+.top-bar, .top-bar ul {
+    background-color: #e9c904;
+}
+#logo{
+width: 132px;
+height: 38px;
+}

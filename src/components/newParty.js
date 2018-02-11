@@ -48,9 +48,8 @@ class NewParty extends React.Component {
 		});	
 }
 
-//!!! work on this!!!! this is what will have to go in the action, 
 	handleButtonClick(e){
-			if(this.state.number=== 0){
+			if(this.state.number=== 2){
 				const date = new Date(this.state.date);
 				const now = new Date();
 				if(date.getTime() < now.getTime()){
@@ -120,8 +119,8 @@ return (
 			{props.index === 2? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "}
 			{props.index === 3? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 4? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
-			{props.index === 5? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
+			{props.index === 6? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 5? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
 			{props.index > 7 ? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
 
 			

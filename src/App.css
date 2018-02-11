@@ -8146,6 +8146,21 @@ textarea {
 .menu-text {
   list-style: none; }
 
+.top-bar {
+  background-color: #e9c904;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px; }
+  .top-bar .top-bar ul {
+    background-color: #e9c904; }
+
+.top-bar, .top-bar ul {
+  background-color: #e9c904; }
+
+#logo {
+  width: 132px;
+  height: 38px; }
+
 .button {
   color: black; }
 
@@ -8213,13 +8228,13 @@ h1 {
   text-align: center; }
 
 .main {
-  background: lightblue;
+  background: #008f95;
   min-height: 350px;
   margin: 5px;
   border-radius: 15px; }
 
 .aside {
-  background: lightpink;
+  background: #e9B000;
   min-height: 350px;
   margin: 8px;
   border-radius: 20px; }
@@ -8237,3 +8252,29 @@ h1 {
   margin-top: 40px;
   text-align: center;
   font-weight: bold; }
+
+.addguest {
+  background-color: deeppink;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 18px; }
+
+.main {
+  padding-top: 60px;
+  text-align: center; }
+
+.main {
+  background: #008f95;
+  min-height: 350px;
+  margin: 5px;
+  border-radius: 15px; }
+
+.aside {
+  background: #e9B000;
+  min-height: 350px;
+  margin: 8px;
+  border-radius: 20px; }
+
+.tipTitle {
+  margin-top: 40px;
+  text-align: center; }

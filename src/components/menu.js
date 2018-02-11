@@ -1,3 +1,5 @@
+/*eslint-disable no-unused-vars */
+
 import React from "react";
 
 class Menu extends React.Component {
@@ -11,18 +13,18 @@ class Menu extends React.Component {
 	};
  }
 
- handleSubmit = (e) => {
-	 e.preventDefault();
+ handleSubmit(e){
+	e.preventDefault();
 	this.props.handleChange('menu', this.state);
 }
 
  render(){
-	 return (
+	return (
 		<div>
 			<div className="row">
-			<div className="small-12 medium-6 medium-offset-3 columns">
+			<div className="small-12 medium-8 columns main">
 
-			<h3>{this.props.title}</h3>
+			<h3>Menu</h3>
 			<form>
 				<label>
 					side
@@ -46,9 +48,13 @@ class Menu extends React.Component {
 				<button type="submit" onClick={this.handleSubmit}>Submit</button>
 			</form>
 		</div>
+		<div className="small-12 medium-3 columns aside">
+		<div className="tipTitle"> </div>
+
 		</div>
 		</div>
-	 );
+		</div>
+	);
  }
 }
 

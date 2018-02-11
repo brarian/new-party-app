@@ -1,7 +1,8 @@
-import React from 'react';
-import {connect } from 'react-redux';
-import newUserAction from '../actions/newUser';
+/*eslint-disable */
 import { withRouter } from 'react-router-dom'; 
+import {connect } from 'react-redux';
+import React from 'react';
+import newUserAction from '../actions/newUser';
 
 class NewUserRegistration extends React.Component {
 	constructor(props){
@@ -10,17 +11,17 @@ class NewUserRegistration extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	onChange(e){
-		e.preventDefault();
-		this.setState({
-		  [e.target.name] : e.target.value
-		});
-	  }
-	  handleClick(e){
-		e.preventDefault();
-		this.props.signUp(this.state);
-		//submit form 
-	  }
+onChange(e){
+	e.preventDefault();
+	this.setState({
+		[e.target.name] : e.target.value
+	});
+}
+handleClick(e){
+	e.preventDefault();
+	this.props.signUp(this.state);
+//submit form 
+}
 	render() {
 		if (this.props.username) {
       this.props.history.push('/new-party')

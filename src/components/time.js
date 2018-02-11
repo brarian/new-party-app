@@ -1,5 +1,5 @@
 import React from 'react';
-import TipBox from './tipBox';
+
 class Time extends React.Component {
 
 	render() {
@@ -8,7 +8,7 @@ class Time extends React.Component {
 			<div> 
 				<div className="row">
 					<div className="small-12 medium-8 columns main">
-						<TipBox tips="" />
+						{/* <TipBox tips="" /> */}
 
 						<h3>{this.props.title}</h3>
 						<input name="time" type="time" onChange={this.props.handleChange} />

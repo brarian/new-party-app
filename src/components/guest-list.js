@@ -31,10 +31,10 @@ handleChange(e){
     <div> 
       <div className="row"> 
         <div className="small-12 medium-8 columns main">
-          <h3>{this.props.title}</h3>
+          <h3>Who's invited?</h3>
             <form >
               <input type="text" onChange={this.handleChange.bind(this)} />
-              <button type="button" onClick={this.handleSubmit.bind(this)}>
+              <button className="small-3 small-offset-3 medium-2 medium-offset-2 button small addguest" type="button" onClick={this.handleSubmit.bind(this)}>
               Add a Guest</button>
             </form>
           <List guests = {this.state.guestsList} /> 
