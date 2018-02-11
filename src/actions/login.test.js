@@ -1,8 +1,9 @@
-import loginAction from './login';
-import actionTypes from './actionTypes'
 import moxios from 'moxios';
 import  thunk  from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
+import loginAction from './login';
+import actionTypes from './actionTypes'
+
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 

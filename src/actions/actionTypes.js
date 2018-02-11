@@ -3,7 +3,8 @@ const actionTypes =  {
 		NEW_USER: "NEW_USER", 
 		SUBMIT: "SUBMIT",
 		PARTY_DATA: "PARTY_DATA", 
-		GET_PARTY_DATA: "GET_PARTY_DATA"
+		GET_PARTY_DATA: "GET_PARTY_DATA",
+		GET_STATUS: "GET_STATUS"
 };
 
 export default actionTypes;
