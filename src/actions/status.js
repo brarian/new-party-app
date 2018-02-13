@@ -2,9 +2,9 @@ import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
 import axios from 'axios';
 
-const getStatus = (partyId) => {
+const getStatusAction = (party) => {
     return (dispatch) => {
-        return axios.put(`/api/party/${id}/status`, partyId)
+        return axios.put(`${API_BASE_URL}/party/${party._id}/status`, party)
             .then((response) => { 
                 return dispatch({
                     type: actionTypes.GET_STATUS, 
