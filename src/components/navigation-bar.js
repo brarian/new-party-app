@@ -18,7 +18,9 @@ const NavigationBar = () =>{
     <div className="top-bar">
       <div className="top-bar-left">
         <ul>
-        <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
+        <Link to="/new-party">
+          <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
+        </Link>
         </ul>
       </div>
       <div className="top-bar-right">
@@ -39,7 +41,9 @@ else
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="dropdown menu" data-dropdown-menu>
-            <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
+              <Link to="/login">
+                <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
+              </Link>
             </ul>
           </div>
           <div className="top-bar-right">

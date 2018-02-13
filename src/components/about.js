@@ -1,20 +1,19 @@
 import React from 'react';
-
+import logos from '../images/logos.png'
 class About extends React.Component {
 	render() {
 		return (
 			<div className="row">
-				<div className="small-12 medium-6 medium-offset-3 columns">
-				<div className="party-box">
-					<h2> This app is going to help you plan a party! </h2>
+				<div className="small-12 medium-8 columns userRegInput">
+				<img src={logos} id="logo" alt="little mixer logo with martini glass"/>
 					<div> 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam.
+						Little Mixer is an app which will help you plan a 
+						party from start to finish. Hosting an event may seem 
+						overwhelming but Little Mixer eases the stress of party 
+						planning by giving you instructions each step of the way. 
 					</div>
 				</div>
 			</div>
-		</div>
 		)
 	}
 } 

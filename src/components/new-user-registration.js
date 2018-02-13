@@ -30,37 +30,38 @@ handleClick(e){
 		return (
 			<div>
 				<div className="row">
-          <div className="small-12 medium-8">
+          <div className="small-12 medium-8 columns userRegInput">
+          <h2>Create a New Account</h2>
             <form>
               <div>
                 <div className="row">
-                  <div className=" small-12 medium-8 medium-offset-3  columns">
-                    <label>First Name
-										<input type="text" name="firstName"  onChange = {this.onChange} required/>
+                  <div className=" small-12 medium-8 medium-offset-2  columns">
+                    <label>
+										<input  placeholder="First Name" type="text" name="firstName"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-                  <div className="small-12 medium-8 medium-offset-3 columns">
-                    <label>Last Name
-										<input type="text" name="lastName"  onChange = {this.onChange} required/>
+                  <div className="small-12 medium-8 medium-offset-2 columns">
+                    <label>
+										<input placeholder="Last Name" type="text" name="lastName"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="small-12 medium-8 medium-offset-3  columns">
-                    <label>Email
-										<input type="email"  name="email"  onChange = {this.onChange} required/>
+									<div className="small-12 medium-8 medium-offset-2 columns">
+                    <label>
+										<input placeholder="Email" type="email"  name="email"  onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="small-12 medium-8  medium-offset-3 columns">
-                    <label>Username
-										<input type="text"  name="userName"   onChange = {this.onChange} required/>
+									<div className="small-12 medium-8  medium-offset-2 columns">
+                    <label>
+										<input placeholder="Username" type="text"  name="userName"   onChange = {this.onChange} required/>
                     </label>
                   </div>
-									<div className="small-12 medium-8 medium-offset-3 columns">
-                    <label>Create a Password
-										<input type="password" name="password"   onChange = {this.onChange} required/>
+									<div className="small-12 medium-8 medium-offset-2 columns">
+                    <label>
+										<input placeholder="Create a Password" type="password" name="password"   onChange = {this.onChange} required/>
                     </label>
                   </div>
-                  <div className="small-12 medium-8 medium-offset-3 columns">
-                    <button className="button small-12 medium-8 medium-offset-3 " onClick={this.handleClick}>CREATE MY ACCOUNT</button>
+                  <div className="small-12 medium-8 medium-offset-2 columns">
+                    <button className="button small-12 medium-8 " onClick={this.handleClick}>CREATE MY ACCOUNT</button>
                   </div>
                 </div>
               </div>

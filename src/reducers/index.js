@@ -3,12 +3,14 @@ import loginReducer from './loginReducer';
 import newUserReducer from './newUserReducer';
 import submitReducer from './submitReducer';
 import partyDataReducer from "./partyDataReducer";
+import statusReducer from "./statusReducer";
 
 const rootReducer = combineReducers({
     loginReducer,
     newUserReducer,
     submitReducer,
-    partyDataReducer
+    partyDataReducer, 
+    statusReducer
 });
 
 export default rootReducer;

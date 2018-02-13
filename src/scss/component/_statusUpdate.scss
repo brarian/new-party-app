@@ -8,16 +8,24 @@
     min-height: 350px;
     margin: 5px;
     border-radius: 15px;
-  }
-  
-  .aside {
+}
+
+.aside {
     background:#c5cbe3;
     min-height: 350px;
     margin: 8px;
     border-radius: 20px;
-  }
+}
 
-  .tipTitle{
-      margin-top: 40px;
-      text-align: center;
-  }
+.tipTitle{
+    margin-top: 40px;
+    text-align: center;
+}
+
+body {
+    background-image: url("../src/images/glitters.jpg");
+    background-repeat: no-repeat;
+    width: 100% !important;
+    z-index: 0;
+}
+

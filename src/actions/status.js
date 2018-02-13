@@ -1,17 +1,18 @@
 import actionTypes from './actionTypes';
 import { API_BASE_URL } from '../config';
+import axios from 'axios';
 
-
-const getStatusAction = (partyId) => {
+const getStatus = (partyId) => {
     return (dispatch) => {
-        return fetch(`${API_BASE_URL}/status/${partyId}`)
-            .then((response) => response.json())
-            .then((data) => {
+        return axios.put(`/api/party/${id}/status`, partyId)
+            .then((response) => { 
                 return dispatch({
                     type: actionTypes.GET_STATUS, 
-                    payload: { data }
+                    payload: response.data.statusUpdate 
                 })
-            })
+            }).catch((error ) => {
+                console.log(error);
+        })
     }
 }
 
