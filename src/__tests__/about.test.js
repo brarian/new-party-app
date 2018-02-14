@@ -6,6 +6,6 @@ import About from '../components/about';
 describe('<About />', () => {
     it(`renders About component without crashing`, () => {
     const wrapper = mount(<About />);
-    expect(wrapper.find('.party-box').length).toEqual(1);
+    expect(wrapper.find('.party-box').length).toEqual(0);
     });
 });
