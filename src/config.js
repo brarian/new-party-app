@@ -1,1 +1,1 @@
-export const API_BASE_URL = "/api";
+export const API_BASE_URL = "https://arcane-castle-30083.herokuapp.com/api";
