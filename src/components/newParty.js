@@ -15,7 +15,6 @@ import Name from './name';
 import { withRouter } from 'react-router-dom'; 
 import Moment from 'moment';
 import '../index.css';
-import Status from './statusUpdate';
 
 class NewParty extends React.Component {
   constructor(props) {
@@ -114,8 +113,7 @@ const Question = (props) => {
 return (
 	<div>
 		<label>
-			{props.index === 0? <div><Status /></div>: " "} 
-			{/* {props.index === 0? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "}  */}
+			{props.index === 0? <div><Type  subQuestions={props.question.subQuestions} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 1? <div><Theme title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 2? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "}
 			{props.index === 3? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 

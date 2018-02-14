@@ -37,12 +37,7 @@ class Profile extends React.Component {
 	};
 
 	redirectToStatusPage(party){
-		this.props.history.push(
-			{
-				pathname: `/party/${party._id}/status`,
-				state: { party, }
-			  }
-			)
+		this.props.history.push(`/party/${party._id}/status`)
 	}
 
 	render() {
@@ -58,13 +53,13 @@ class Profile extends React.Component {
 						{ 
 							this.props.partyData.map((party, index )=>{
 								return (
-									<div key={index} className="small-box" >
+									<div key={index} className="main" >
 										<div> <strong>Party Name:</strong> {party.name} </div>
 										<div> <strong>Party Date:</strong> {party.date}</div>
 										<div> <strong>Party Time:</strong> {party.time}</div>
 										<div> <strong>Party Menu:</strong> {party.menu}</div>
 										<div> <strong>Guest List :</strong> {party.bigGuestList}</div>
-										<button onClick={(e)=>{ 
+										<button className="button small-6 medium-4" onClick={(e)=>{ 
 											e.preventDefault();
 											this.redirectToStatusPage(party)}}>Status Update Button</button>
 										<br />

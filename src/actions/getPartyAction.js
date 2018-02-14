@@ -3,7 +3,7 @@ import { API_BASE_URL } from '../config';
 
 const getPartyDataAction = (userId) => {
     return (dispatch) => {
-        return fetch(`${API_BASE_URL}/party/${userId}`)
+        return fetch(`${API_BASE_URL}/party/user/${userId}`)
             .then((response) => response.json())
             .then((data) => {
                 return dispatch({

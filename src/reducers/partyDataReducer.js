@@ -8,6 +8,10 @@ export default function partyDataReducer(state={}, action){
             //return Object.assign({}, state, action.payload);
         case actionTypes.GET_PARTY_DATA:
             return Object.assign({}, state, action.payload)
+        case actionTypes.GET_PARTY_BY_ID:
+            return Object.assign({}, state, action.payload)
+        case actionTypes.GET_STATUS:
+            return Object.assign({}, state, { party: action.payload})
         default:
             return state;
     }

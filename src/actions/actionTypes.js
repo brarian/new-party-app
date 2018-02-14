@@ -4,7 +4,8 @@ const actionTypes =  {
 		SUBMIT: "SUBMIT",
 		PARTY_DATA: "PARTY_DATA", 
 		GET_PARTY_DATA: "GET_PARTY_DATA",
-		GET_STATUS: "GET_STATUS"
+		GET_STATUS: "GET_STATUS", 
+		GET_PARTY_BY_ID: "GET_PARTY_BY_ID"
 };
 
 export default actionTypes;
