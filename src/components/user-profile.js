@@ -69,7 +69,6 @@ class Profile extends React.Component {
 						}
 					</ul>
 				</div>
-				<div className="medium-4">different box</div>
 
 			</div>
 		)

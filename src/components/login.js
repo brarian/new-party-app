@@ -34,9 +34,9 @@ class Login extends React.Component {
     //submit form 
   }
   render() {
-    // if (window.localStorage.getItem('token')) {
-    //   this.props.history.push('/new-party')
-    // }
+    if (window.localStorage.getItem('token')) {
+      this.props.history.push('/new-party')
+    }
     return (
       <div>
         <div className="row">
@@ -58,6 +58,11 @@ class Login extends React.Component {
                   <div className="small-12 medium-8 medium-offset-2 columns">
                     <button className="button small-12 medium-8 " onClick={this.handleClick.bind(this)}>SIGN IN</button>
                   </div>
+                </div>
+                <div className="demoBox">
+                Demo Account
+                    username: bnamo
+                    password: 12345
                 </div>
               </div>
             </form>

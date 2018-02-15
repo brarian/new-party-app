@@ -41,7 +41,7 @@ else
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="dropdown menu" data-dropdown-menu>
-              <Link to="/login">
+              <Link to="/">
                 <img src={logos} id="logo" alt="little mixer logo with martini glass"/>
               </Link>
             </ul>

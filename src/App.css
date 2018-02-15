@@ -8166,7 +8166,7 @@ textarea {
 .signUpButton {
   font-size: 1.25rem;
   position: absolute;
-  top: 550px;
+  top: 300px;
   margin-left: 45%;
   background-color: orangered;
   color: white; }
@@ -8187,6 +8187,15 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+.demoBox {
+  border: solid black 2px;
+  width: 300px;
+  height: 150px;
+  font-size: 23pt;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto; }
 
 .text {
   position: absolute;
@@ -8250,11 +8259,13 @@ p {
 .heading {
   margin-top: 20px;
   font-weight: bold;
-  font-size: 28pt;
+  font-size: 22pt;
   text-align: center; }
 
 .landingBox {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px; }
 
 .main {
   padding-top: 60px;
@@ -8306,3 +8317,28 @@ p {
 .tipTitle {
   margin-top: 40px;
   text-align: center; }
+
+.statusInput {
+  text-align: center;
+  background-color: #4056A1;
+  min-height: 350px;
+  margin: 5px;
+  padding-top: 60px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.aside {
+  background: #c5cbe3;
+  min-height: 350px;
+  margin: 8px; }
+
+.tipTitle {
+  margin-top: 40px;
+  text-align: center; }
+
+body {
+  background-image: url("../src/images/glitters.jpg");
+  background-repeat: no-repeat;
+  width: 100% !important;
+  z-index: 0; }

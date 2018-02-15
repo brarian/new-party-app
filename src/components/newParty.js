@@ -15,7 +15,7 @@ import Name from './name';
 import { withRouter } from 'react-router-dom'; 
 import Moment from 'moment';
 import '../index.css';
-
+import Profile from './user-profile';
 class NewParty extends React.Component {
   constructor(props) {
 		super(props);
@@ -60,7 +60,7 @@ class NewParty extends React.Component {
 			this.setState({
 					number: this.state.number + 1
 			});
-			if(this.state.number === 5){
+			if(this.state.number === 6){
 				this.props.submitAnswers(this.state);
 			}
 	}
@@ -97,7 +97,7 @@ return (
 					return (<div key={index}>   
 							<Question index={index} question={question} onChange={props.onChange}/>
 							<br />
-								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large" onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
+								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns nextButton button large" onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
 						</div>)
 						}
 						return null
@@ -118,53 +118,16 @@ return (
 			{props.index === 2? <div><DateComponent  title={props.question.title} handleChange={props.onChange}/></div> : " "}
 			{props.index === 3? <div><Time title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 4? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
-			{props.index === 6? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
-			{props.index === 5? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
-			{props.index > 7 ? <div>< SpecQuestion handleSubQuestionChange={props.onChange} question={props.question}/></div>: " "}
+			{props.index === 5? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
+			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
+			{/* link to the profile */}
+			{props.index > 6 ? <div><Profile /></div>:"" }
 
 			
 		</label>
 	</div>
 )
 }
-
-// class List extends React.Component {
-// constructor(props){
-// 	super(props);
-// 		this.state = {
-// 			guests: [],
-// 			guest: ""
-// 		}
-// 	}   
-
-// 	onChange = (e) => {
-// 		e.preventDefault();
-// 		this.setState({
-// 			guest: e.target.value,
-// 		});
-// 	}
-
-// 	onSubmit = (e) => {
-// 		e.preventDefault();
-// 		if(this.state.guest){
-// 			const guests = this.state.guests;
-// 			guests.push(this.state.guest);
-// 			this.setState({
-// 				guests,
-// 			})
-// 		}
-// 	}
-// 	render() {
-// 		return (
-// 			<div>
-// 				<button type="button" onClick={this.onSubmit.bind(this)}>Submit</button>
-// 				<ul className="list">
-// 						{this.state.guests.map((guest, index)=> (<li key={index}>{guest}</li>))}
-// 				</ul>
-// 			</div>
-// 		)
-// 	}
-// }
 
 const mapStoretoProps = (store) => {
 	console.log(store);
