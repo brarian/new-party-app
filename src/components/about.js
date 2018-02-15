@@ -11,6 +11,14 @@ class About extends React.Component {
 						party from start to finish. Hosting an event may seem 
 						overwhelming but Little Mixer eases the stress of party 
 						planning by giving you instructions each step of the way. 
+						<br />
+						<br />
+					Select New Party and go through a series of questions that will be the base of your party. 
+					your party. 
+					Once your party will be saved in your Profile page. Inside your 
+					Profile you'll find the party you planned as well as a well as 
+					a timed checklist of items that need to be complete so your that 
+					planning your party will be easy and stress free. 
 					</div>
 				</div>
 			</div>

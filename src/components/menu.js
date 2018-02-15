@@ -23,29 +23,41 @@ class Menu extends React.Component {
 		<div>
 			<div className="row">
 			<div className="small-12 medium-8 columns main">
-
 			<h3>Menu</h3>
 			<form>
+			<div className="row">
+				<div className=" small-12 medium-8 medium-offset-2  columns">
 				<label>
 					side
 					<input type="text" value={this.state.side} onChange={(e)=> this.setState({side: e.target.value})} />
 				</label>
-				<br />
+				</div>
+
+				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					salad
 					<input type="text" value={this.state.salad} onChange={(e)=> this.setState({salad: e.target.value})} />
 				</label>
-				<br />
+				</div>
+
+				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					protien
 					<input type="text" value={this.state.protien} onChange={(e)=> this.setState({protien: e.target.value})} />
 				</label>
-				<br />
+				</div>
+				
+				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					bread
 					<input type="text" value={this.state.bread} onChange={(e)=> this.setState({bread: e.target.value})} />
 				</label>
-				<button type="submit" onClick={this.handleSubmit}>Submit</button>
+				</div>
+
+				<div className="small-12 medium-8 medium-offset-2 columns">
+					<button  className="button small-12 medium-8 " type="submit" onClick={this.handleSubmit}>Submit</button>
+				</div>
+				</div>
 			</form>
 		</div>
 		<div className="small-12 medium-3 columns aside">

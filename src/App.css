@@ -8263,6 +8263,7 @@ p {
   text-align: center; }
 
 .landingBox {
+  background-color: white;
   margin-bottom: 30px;
   text-align: center;
   padding: 20px; }
@@ -8342,3 +8343,14 @@ body {
   background-repeat: no-repeat;
   width: 100% !important;
   z-index: 0; }
+
+.userRegInput {
+  text-align: center;
+  background-color: #c5cbe3;
+  background: #c5cbe3;
+  margin: 5px;
+  padding-top: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px; }
