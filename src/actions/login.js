@@ -12,7 +12,7 @@ const loginAction = (credentials) => {
       window.localStorage.setItem('token', token)
       return dispatch({
         type: actionTypes.LOGIN_SUCESSFUL,
-        payload:  token 
+        payload:  {token} 
       })
     }).catch((error) => {
       console.log(error);
