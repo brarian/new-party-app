@@ -1,1 +1,1 @@
-export const API_BASE_URL = "https://sleepy-nobel-53296b.netlify.com/api/";
+export const API_BASE_URL = "https://sleepy-nobel-53296b.netlify.com/api";
