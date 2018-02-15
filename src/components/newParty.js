@@ -16,6 +16,7 @@ import { withRouter } from 'react-router-dom';
 import Moment from 'moment';
 import '../index.css';
 import Profile from './user-profile';
+const jwtDecode = require('jwt-decode');
 class NewParty extends React.Component {
   constructor(props) {
 		super(props);
@@ -31,7 +32,7 @@ class NewParty extends React.Component {
 	}
 	componentWillMount(){
 		const token = window.localStorage.getItem('token');
-		// this.setState({ userId: jwtDecode(token).userId });
+		this.setState({ userId: jwtDecode(token).userId });
 		if (!token){
 			this.props.history.push('/login')
 		}

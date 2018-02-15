@@ -74,7 +74,6 @@ handleClick(e){
 } 
 
 const mapStoreToProps = (store) => {
-	console.log(store.newUserReducer.userName)
   return {
     username: store.newUserReducer.userName,
     email: store.newUserReducer.email,

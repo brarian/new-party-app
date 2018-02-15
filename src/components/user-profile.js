@@ -25,11 +25,6 @@ class Profile extends React.Component {
 
 		this.setState(userData)
 		this.props.profile(userData.userId)
-		//this.setState({ userData });
-		// this.props.profile(userData.userId)
-		// 	.then(() => {
-				
-		// 	});
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -49,7 +44,6 @@ class Profile extends React.Component {
 						<div> <strong>Name:</strong> {this.state.userName}</div>
 						<div> <strong>Email:</strong> {this.state.email}</div>
 						<br />
-						{/* component that renders recent parties */}
 						{ 
 							this.props.partyData.map((party, index )=>{
 								return (
@@ -57,7 +51,7 @@ class Profile extends React.Component {
 										<div> <strong>Party Name:</strong> {party.name} </div>
 										<div> <strong>Party Date:</strong> {party.date}</div>
 										<div> <strong>Party Time:</strong> {party.time}</div>
-										<div> <strong>Party Menu:</strong> {party.menu}</div>
+										<div> <strong>Party Menu:</strong> {party.menu.bread}</div>
 										<div> <strong>Guest List :</strong> {party.bigGuestList}</div>
 										<button className="button small-6 medium-4" onClick={(e)=>{ 
 											e.preventDefault();

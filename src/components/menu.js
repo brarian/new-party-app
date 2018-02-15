@@ -55,7 +55,7 @@ class Menu extends React.Component {
 				</div>
 
 				<div className="small-12 medium-8 medium-offset-2 columns">
-					<button  className="button small-12 medium-8 " type="submit" onClick={this.handleSubmit}>Submit</button>
+					<button  className="button small-12 medium-8 " type="submit" onClick={this.handleSubmit.bind(this)}>Submit</button>
 				</div>
 				</div>
 			</form>
