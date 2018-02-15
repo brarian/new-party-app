@@ -2,23 +2,24 @@
     a {
         color: #000000;
     }
+    
 }
 
 .menu-text {
     list-style: none;
 }
 .top-bar {
-    background-color: #efe2ba;
+    background-color: white;
     padding: 5px;
-    border-radius: 10px;
+    // border-radius: 10px;
 
     .top-bar ul {
-        background-color: #efe2ba;
+        background-color: white;
     }
 }
 
 .top-bar, .top-bar ul {
-    background-color: #efe2ba;
+    background-color: white;
 }
 #logo{
 width: 132px;

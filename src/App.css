@@ -8147,14 +8147,13 @@ textarea {
   list-style: none; }
 
 .top-bar {
-  background-color: #efe2ba;
-  padding: 5px;
-  border-radius: 10px; }
+  background-color: white;
+  padding: 5px; }
   .top-bar .top-bar ul {
-    background-color: #efe2ba; }
+    background-color: white; }
 
 .top-bar, .top-bar ul {
-  background-color: #efe2ba; }
+  background-color: white; }
 
 #logo {
   width: 132px;
@@ -8162,14 +8161,12 @@ textarea {
 
 .button {
   color: black;
-  border-radius: 25px;
   background-color: #efe2ba; }
 
 .signUpButton {
   font-size: 1.25rem;
   position: absolute;
   top: 550px;
-  border-radius: 25px;
   margin-left: 45%;
   background-color: orangered;
   color: white; }
@@ -8180,14 +8177,12 @@ textarea {
   background: #c5cbe3;
   min-height: 350px;
   margin: 5px;
-  border-radius: 15px;
   padding-top: 60px;
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
 
 body {
-  background: url("./images/backgroundConfetti.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8206,24 +8201,25 @@ body {
 
 img {
   width: 100%;
-  height: 500px; }
+  height: 500px;
+  position: relative; }
 
-h1 {
-  position: absolute;
-  top: 207px;
-  background-color: orangered;
+.header {
+  top: 150px;
   color: white;
-  /* border-color: coral; */
-  border: solid 9px coral;
-  width: 100%; }
+  font-size: 50pt;
+  font-weight: bold;
+  /* text-align: center; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  position: absolute; }
 
 .signUpButton {
   font-size: 1.25rem;
   position: absolute;
-  top: 350px;
+  top: 450px;
   /* margin-left: auto; */
   /* margin-right: auto; */
-  border-radius: 25px;
   /* text-align: center; */
   margin-left: 45%;
   background-color: orangered;
@@ -8234,14 +8230,31 @@ h1 {
     color: white; }
 
 .sym {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   margin-bottom: 10px; }
   .sym column {
     text-align: center; }
 
 .symbol {
-  margin-top: 30px; }
+  margin-top: 30px;
+  background-color: white;
+  text-align: center; }
+
+.head {
+  font-weight: bold; }
+
+p {
+  line-height: 0; }
+
+.heading {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 28pt;
+  text-align: center; }
+
+.landingBox {
+  margin-bottom: 30px; }
 
 .main {
   padding-top: 60px;
@@ -8250,14 +8263,12 @@ h1 {
 .main {
   background: #4056A1;
   min-height: 350px;
-  margin: 5px;
-  border-radius: 15px; }
+  margin: 5px; }
 
 .aside {
   background: #c5cbe3;
   min-height: 350px;
-  margin: 8px;
-  border-radius: 20px; }
+  margin: 8px; }
 
 .tipTitle {
   margin-top: 40px;
@@ -8276,8 +8287,7 @@ h1 {
 .addguest {
   background-color: deeppink;
   font-weight: bold;
-  font-size: 14px;
-  border-radius: 18px; }
+  font-size: 14px; }
 
 .main {
   padding-top: 60px;
@@ -8286,14 +8296,12 @@ h1 {
 .main {
   background: #4056A1;
   min-height: 350px;
-  margin: 5px;
-  border-radius: 15px; }
+  margin: 5px; }
 
 .aside {
   background: #c5cbe3;
   min-height: 350px;
-  margin: 8px;
-  border-radius: 20px; }
+  margin: 8px; }
 
 .tipTitle {
   margin-top: 40px;
