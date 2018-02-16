@@ -49,21 +49,23 @@ class NewParty extends React.Component {
 }
 
 	handleButtonClick(e){
-			if(this.state.number=== 2){
-				const date = new Date(this.state.date);
-				const now = new Date();
-				if(date.getTime() < now.getTime()){
-					alert("you need to select a date in the future!");
-					return null;
-				}
-			} 
-
-			this.setState({
-					number: this.state.number + 1
-			});
-			if(this.state.number === 6){
-				this.props.submitAnswers(this.state);
+		const fields = ["date","time", "bigGuestList", "name", "menu"]
+		if(this.state.number=== 2){
+			const date = new Date(this.state.date);
+			const now = new Date();
+			if(date.getTime() < now.getTime()){
+				alert("you need to select a date in the future!");
+				return null;
 			}
+		} 
+
+		this.setState({
+				number: this.state.number + 1
+		});
+		if(this.state.number === 6){
+			this.props.submitAnswers(this.state);
+			this.props.history.push('/profile')
+		}
 	}
 
 	render() {
@@ -98,7 +100,7 @@ return (
 					return (<div key={index}>   
 							<Question index={index} question={question} onChange={props.onChange}/>
 							<br />
-								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns nextButton button large" onClick={props.handleButtonClick}>{props.number !== 5? "Next": "Submit Answers"} </button>
+								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns nextButton button large" onClick={props.handleButtonClick}>{props.number !== 6? "Next": "Submit Answers"} </button>
 						</div>)
 						}
 						return null
@@ -122,7 +124,7 @@ return (
 			{props.index === 5? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
 			{/* link to the profile */}
-			{props.index > 6 ? <div><Profile /></div>:"" }
+			{/* {props.index > 6 ? <div><Profile /></div>:"" } */}
 
 			
 		</label>
@@ -131,7 +133,6 @@ return (
 }
 
 const mapStoretoProps = (store) => {
-	console.log(store);
 	return { 
 		submitResponse: store.submitReducer.submitResponse,
 		eventData: store.submitReducer.eventData,
