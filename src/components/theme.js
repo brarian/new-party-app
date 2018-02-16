@@ -14,6 +14,7 @@ class Theme extends React.Component {
 	 }
  
  handleChange(event) {
+
 	 this.setState({value: event.target.value});
  }
  
@@ -35,7 +36,7 @@ class Theme extends React.Component {
 					 <option value="No">No Theme</option>
 					 <option value="Yes">Yes, I have a Theme</option>
 				 </select>
-				 {this.state.value === "Yes"? <ThemeLabel /> : ''}
+				 {this.state.value === "Yes"? <ThemeLabel handleChange={this.props.handleChange} /> : ''}
 			 </div>
 			 <div className="small-12 medium-3 columns aside">
 			 <div className="tipTitle"> On Themes</div>
@@ -46,11 +47,8 @@ class Theme extends React.Component {
 			 throughout the entire evening. A creative theme can make your party 
 			 feel special without adding to your budget, and it will help you come up 
 			 with ideas for food, drinks, and decorations.
-
-
 			</div>
 			</div>
-			
 			</div>
 		 )
 	 }
@@ -61,18 +59,22 @@ export default Theme
 
 //cant nest forms, how to render side by side?
 class ThemeLabel extends React.Component {
+
 	constructor(props) {
 		super(props);
-		this.state = {
-			value: ''
-		}
 	}
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		value: ''
+	// 	}
+	// }
 
 	render(){
 		return (
 			<div>
 					<label>
-						<input type="text"  onChange={this.props.onChange} />
+					<input name="theme" type="text" onChange={this.props.handleChange} />
 					</label>
 			</div>
 		);

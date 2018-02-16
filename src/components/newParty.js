@@ -20,13 +20,15 @@ const jwtDecode = require('jwt-decode');
 class NewParty extends React.Component {
   constructor(props) {
 		super(props);
-		this.state = { 
+		this.state = {
+			type: '', 
+			theme: 'No theme',
 			name: '',
 			date: '',
 			time: '',
 			menu: {},
 			number: 0,
-			bigGuestList: {},
+			bigGuestList: '',
 			userId: ''
         }
 	}
@@ -39,6 +41,12 @@ class NewParty extends React.Component {
 	}
 	onChange(e, value){
 		if(typeof e === "string"){
+			if(e ==="menu"){
+				this.setState({
+					menu: Object.assign({}, this.state.menu, {[value.target.name]: value.target.value})
+				})
+				return null
+			}
 			this.setState({[e]: value}, () => {
 			});
 			return null;
@@ -49,7 +57,21 @@ class NewParty extends React.Component {
 }
 
 	handleButtonClick(e){
-		const fields = ["date","time", "bigGuestList", "name", "menu"]
+		const fields = ["type", "theme", "date","time", "bigGuestList", "name", "menu"]
+		if(!this.state[fields[this.state.number]]){
+			alert("dont't be lazy please input this field");
+			return null
+		}
+		if(this.state.number === 6){
+			const menuFields = ["protien", "bread", "salad", "side"];
+			menuFields.forEach((field)=> {
+				if(!this.state.menu[field]){
+					alert("dont't be lazy please input this field");
+					throw null;
+				}
+			})
+		}
+
 		if(this.state.number=== 2){
 			const date = new Date(this.state.date);
 			const now = new Date();
@@ -64,7 +86,7 @@ class NewParty extends React.Component {
 		});
 		if(this.state.number === 6){
 			this.props.submitAnswers(this.state);
-			this.props.history.push('/profile')
+			// this.props.history.push('/profile');
 		}
 	}
 
@@ -142,6 +164,6 @@ const mapStoretoProps = (store) => {
 const mapDispatchtoProps = (dispatch) => {
 	return {
 		submitAnswers: (formData) => (dispatch(submitAction(formData)))
-	}
+	} 
 }
 export default connect(mapStoretoProps, mapDispatchtoProps)(withRouter(NewParty));

@@ -3,19 +3,9 @@
 import React from "react";
 
 class Menu extends React.Component {
- constructor(props) {
-  super(props);
-  this.state = {
-		"side": "",
-		"salad": "",
-		"protien": "",
-		"bread": ""
-	};
- }
-
- handleSubmit(e){
+ handleChange(e){
 	e.preventDefault();
-	this.props.handleChange('menu', this.state);
+	this.props.handleChange('menu', e);
 }
 
  render(){
@@ -29,33 +19,29 @@ class Menu extends React.Component {
 				<div className=" small-12 medium-8 medium-offset-2  columns">
 				<label>
 					side
-					<input type="text" value={this.state.side} onChange={(e)=> this.setState({side: e.target.value})} />
+					<input type="text" name="side" onChange={this.handleChange.bind(this)} />
 				</label>
 				</div>
 
 				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					salad
-					<input type="text" value={this.state.salad} onChange={(e)=> this.setState({salad: e.target.value})} />
+					<input type="text" name="salad" onChange={this.handleChange.bind(this)} />
 				</label>
 				</div>
 
 				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					protien
-					<input type="text" value={this.state.protien} onChange={(e)=> this.setState({protien: e.target.value})} />
+					<input type="text" name="protien"  onChange={this.handleChange.bind(this)} />
 				</label>
 				</div>
 				
 				<div className=" small-12 medium-8 medium-offset-2  columns">	
 				<label>
 					bread
-					<input type="text" value={this.state.bread} onChange={(e)=> this.setState({bread: e.target.value})} />
+					<input type="text" name="bread"  onChange={this.handleChange.bind(this)} />
 				</label>
-				</div>
-
-				<div className="small-12 medium-8 medium-offset-2 columns">
-					<button  className="button small-12 medium-8 " type="submit" onClick={this.handleSubmit.bind(this)}>Submit</button>
 				</div>
 				</div>
 			</form>

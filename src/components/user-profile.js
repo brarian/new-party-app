@@ -38,16 +38,15 @@ class Profile extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="party-box ">
-				
-					<ul>
-						<div> <strong>Name:</strong> {this.state.userName}</div>
-						<div> <strong>Email:</strong> {this.state.email}</div>
+				<div>
+					<div className="username"> {this.state.userName}'s Parties</div>
+						{/* <div> <strong>Email:</strong> {this.state.email}</div> */}
 						<br />
 						{ 
 							this.props.partyData.map((party, index )=>{
 								return (
-									<div key={index} className="main" >
+								
+									<div key={index} className="userRegInput medium-10">
 										<div> <strong>Party Name:</strong> {party.name} </div>
 										<div> <strong>Party Date:</strong> {party.date}</div>
 										<div> <strong>Party Time:</strong> {party.time}</div>
@@ -58,10 +57,10 @@ class Profile extends React.Component {
 											this.redirectToStatusPage(party)}}>Status Update Button</button>
 										<br />
 									</div>
+					
 								)
 							}) 
 						}
-					</ul>
 				</div>
 
 			</div>

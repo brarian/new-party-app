@@ -108,7 +108,7 @@ class Status extends React.Component {
 
 
                 <div className="row">
-				<div className="small-12 medium-8 columns statusInput">
+				<div className="small-12 medium-8 medium-offset-2 columns statusInput">
                     <h2>Two Hour Befores</h2>
                     <div className="switch">Make big batch of drinks!
                         <Switch input={{name: "drinks", defaultChecked:  this.props.party.statusUpdate.drinks}} size={"small"} active={{ text: 'Yes' }} inactive={{ text: 'No' }} onChange={this.onChange}/>

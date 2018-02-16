@@ -10,21 +10,21 @@ class Type extends React.Component {
    };
 }
 
-handleChange(e){
-	e.preventDefault();
-	this.setState({subQuestionType: e.target.value});
-}
-handleSubQuestionChange(e){
-	e.preventDefault();
-	this.setState({
-		[e.target.name]: e.target.value
-	});
+// handleChange(e){
+// 	e.preventDefault();
+// 	this.setState({subQuestionType: e.target.value});
+// }
+// handleSubQuestionChange(e){
+// 	e.preventDefault();
+// 	this.setState({
+// 		[e.target.name]: e.target.value
+// 	});
 
-}
-handleClick(e){
-	e.preventDefault();
-	this.props.handleChange("subquestion", this.state)
-}
+// }
+// handleClick(e){
+// 	e.preventDefault();
+// 	this.props.handleChange("subquestion", this.state)
+// }
 
 // index.js:2177 Warning: Use the `defaultValue` or `value` props on 
 //<select> instead of setting `selected` on <option>.
@@ -35,11 +35,10 @@ render() {
 			<div className="row">
 				<div className="small-12 medium-8 columns main">
 			<h3>What type of party are you planning?</h3>
-			<select onChange={this.handleChange.bind(this)}>
+			<select name="type" onChange={this.props.handleChange}>
 				<option value="">party option</option>
-				<option  value="dinnerParty">Dinner Party</option>
+				<option value="dinnerParty">Dinner Party</option>
 				<option value="cocktail">Cocktail Party</option>
-				<option value="potluck">Potluck</option>
 			</select>
 
 			{/* {this.state.subQuestionType? <div>{this.props.subQuestions

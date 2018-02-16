@@ -27,7 +27,7 @@ const NavigationBar = () =>{
         <ul className="dropdown menu" data-dropdown-menu>
           <li><Link to="/new-party">New Party </Link></li>
           <li><Link to="/profile">Profile </Link></li>
-          <li><Link to="/logOut">log Out </Link></li>
+          <li><Link to="/logOut">Log Out </Link></li>
         </ul>
       </div>
     </div>

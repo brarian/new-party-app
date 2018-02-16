@@ -9,7 +9,7 @@ class Login extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      
+      error: ''
     }
   }
   componentWillMount(){
@@ -18,8 +18,11 @@ class Login extends React.Component {
     }
   }
   componentWillReceiveProps(nextProps){
+    console.log(nextProps);
     if(nextProps.token || this.props.token){
         this.props.history.push('/new-party')   
+    } else {
+      this.setState({ error: nextProps.error });
     }
   }
   onChange(e){
@@ -55,6 +58,7 @@ class Login extends React.Component {
                       <input placeholder="password" type="password" name="password" onChange = {this.onChange.bind(this)} required/>
                     </label>
                   </div>
+                  <p className="error">{this.state.error}</p>
                   <div className="small-12 medium-8 medium-offset-2 columns">
                     <button className="button small-12 medium-8 " onClick={this.handleClick.bind(this)}>SIGN IN</button>
                   </div>
@@ -76,7 +80,8 @@ class Login extends React.Component {
 const mapStoreToProps = (store) => {
   return {
     eventData: store.submitReducer.eventData,
-    token: store.loginReducer.token
+    token: store.loginReducer.token,
+    error: store.loginReducer.error
   };
 } 
 const mapDispatchToProps = (dispatch) => {

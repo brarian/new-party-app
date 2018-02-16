@@ -13,6 +13,7 @@ const submitAction = (formData) => {
 		})
 		.then((data) => data.json())
 		.then((data) => {
+			window.location.href= "profile"
 			return dispatch({
 				type: actionTypes.SUBMIT,
 				payload: data 

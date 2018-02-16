@@ -15,7 +15,10 @@ const loginAction = (credentials) => {
         payload:  {token} 
       })
     }).catch((error) => {
-      console.log(error);
+      return dispatch({
+        type: actionTypes.LOGIN_NOT_SUCESSFUL,
+        error: 'username and password are not correct'
+      })
     })
   }
 }

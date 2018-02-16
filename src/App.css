@@ -8159,6 +8159,9 @@ textarea {
   width: 132px;
   height: 38px; }
 
+.heading {
+  padding-bottom: 20px; }
+
 .button {
   color: black;
   background-color: #efe2ba; }
@@ -8170,6 +8173,9 @@ textarea {
   margin-left: 45%;
   background-color: orangered;
   color: white; }
+
+body {
+  background-color: lightgrey; }
 
 .userRegInput {
   text-align: center;
@@ -8194,6 +8200,12 @@ body {
   height: 150px;
   font-size: 23pt;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto; }
+
+.error {
+  text-align: center;
+  color: red;
   margin-left: auto;
   margin-right: auto; }
 
@@ -8260,7 +8272,8 @@ p {
   margin-top: 20px;
   font-weight: bold;
   font-size: 22pt;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
 
 .landingBox {
   background-color: white;
@@ -8338,12 +8351,6 @@ p {
   margin-top: 40px;
   text-align: center; }
 
-body {
-  background-image: url("../src/images/glitters.jpg");
-  background-repeat: no-repeat;
-  width: 100% !important;
-  z-index: 0; }
-
 .userRegInput {
   text-align: center;
   background-color: #c5cbe3;
@@ -8354,3 +8361,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 30px; }
+
+.username {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px; }
+
+.userRegInput {
+  text-align: center;
+  background-color: #c5cbe3;
+  background: #c5cbe3;
+  padding-bottom: 30px;
+  text-align: center;
+  border: solid 3px;
+  min-height: 70px; }
