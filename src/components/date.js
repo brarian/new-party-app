@@ -17,7 +17,8 @@ class Date extends React.Component {
 			</div>
 			<div className="small-12 medium-3 columns aside">
 			<div className="tipTitle"><b>picking a date</b> </div>
-			make sure to pick a date when most of your guests are free. 
+			Try to pick a date at least 2 - 3 weeks in the future to give yourself time to get ready. 
+			Make sure to pick a date when most of your guests are free. 
 			Do you know of another party happening
 			or a community event or holiday that has everyone booked?
 			You may have to do some asking around beforehand to 

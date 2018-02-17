@@ -43,10 +43,11 @@ handleChange(e){
           <div className="tipTitle"> group dynamics </div>
             <div>Your guests don't need to know one another,
               but they should be able to socialize in a mixed group 
-              if they don't. And, of course, don't invite 
-              friends who get along poorly with
-                one another to the same party–that is unless you intend to
-                make their hostility be the main event.
+              if they don't. Be cognizant of how many people you invite, 
+              a bigger party isn't necessarily always better. 
+              <br />
+              Expect 75% of your guest list to show up if they are close
+              friends and 60% to show up if they aren't as close to you.  
             </div>
           </div>
         </div>

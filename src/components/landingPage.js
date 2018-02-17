@@ -21,13 +21,13 @@ class LandingPage extends React.Component {
 		party planning made easy
 	</div>
 	<div >
-		<button className="small-4 small-offset-4 medium-2 medium-offset-3 columns signUpButton button large"> <Link to="/newUser">Join Us!</Link></button>
+		<button className="small-12 medium-12 signUpButton button large"> <Link to="/newUser">Join Us!</Link></button>
 	</div>
 	<div>
 	<div  className="heading">How Little Mixer Works </div>
 	<div className="grid-x">
 		<div className="cell medium-auto landingBox"><img src={pencil} alt="icon of a pencil" className="sym"/><p><span className="head">Plan</span> </p> Choose what type of party you’d like to have. The series of questions you answer will serve as the base of your party</div>
-		<div className="cell medium-auto landingBox "><img src={execute} alt="icon of a checklist" className="sym"/><p><span className="head">Execute</span></p> Keep track of what needs to be done and when it needs to be done.</div>
+		<div className="cell medium-auto landingBox "><img src={execute} alt="icon of a checklist" className="sym"/><p><span className="head">Execute</span></p> Keep track of what needs to be done and when it needs to be done using the cheklist button in your Profile.</div>
 		<div className="cell medium-auto landingBox "><img src={balloon} alt="icon of a balloon" className="sym"/><p><span className="head">Entertain</span> </p>Join your guests in enjoying the wonderful party you’ve planned! </div>
 	</div>
 	</div>

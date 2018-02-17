@@ -53,7 +53,6 @@ render() {
 			<div className="tipTitle"> general time guide</div>
 			<div><b>Cocktail Party: </b><span>The average cocktail party lasts 2-3 hours during which guests snack on a simple spread of food and imbibe on great cocktails while chatting with other guests. </span></div>
 			<div><b>Dinner Party:   </b><span> a party of people assembled to have dinner together </span></div>
-			<div><b>Potluck:  </b><span>potluck is a gathering where each guest contributes a different and unique dish of food to be shared </span></div>
 		</div>
 		</div>
 

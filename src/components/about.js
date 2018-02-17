@@ -15,9 +15,9 @@ class About extends React.Component {
 						<br />
 					Select New Party and go through a series of questions that will be the base of your party. 
 					your party. 
-					Once your party will be saved in your Profile page. Inside your 
-					Profile you'll find the party you planned as well as a well as 
-					a timed checklist of items that need to be complete so your that 
+					Your party will be listed in your Profile page.  
+					Select the Checklist button for the party you're planning and you'll find
+					a timed checklist of items that need to be completed so your that 
 					planning your party will be easy and stress free. 
 					</div>
 				</div>

@@ -45,17 +45,21 @@ class Profile extends React.Component {
 						{ 
 							this.props.partyData.map((party, index )=>{
 								return (
-								
+									<div className="left"> 
 									<div key={index} className="userRegInput medium-10">
 										<div> <strong>Party Name:</strong> {party.name} </div>
 										<div> <strong>Party Date:</strong> {party.date}</div>
 										<div> <strong>Party Time:</strong> {party.time}</div>
 										<div> <strong>Party Menu:</strong> {party.menu.bread}</div>
+										<div>{party.menu.side}</div>
+										<div>{party.menu.salad}</div>
+										<div>{party.menu.protien}</div>
 										<div> <strong>Guest List :</strong> {party.bigGuestList}</div>
 										<button className="button small-6 medium-4" onClick={(e)=>{ 
 											e.preventDefault();
-											this.redirectToStatusPage(party)}}>Status Update Button</button>
+											this.redirectToStatusPage(party)}}>Checklist</button>
 										<br />
+									</div>
 									</div>
 					
 								)

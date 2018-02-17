@@ -15,9 +15,8 @@ class Time extends React.Component {
 					</div>
 					<div className="small-12 medium-3 columns aside">
 						<div className="tipTitle"> general time guide</div>
-						<div><b>Cocktail: </b><span>5pm - 7 pm</span></div>
-						<div><b>Dinner:   </b><span> start at 6:30 - 7, usually last 3 -4 hours </span></div>
-						<div><b>potluck:  </b><span>start at 6:30 - 7, usually last 3 -4 hours </span></div>
+						<div><b>Cocktail: </b><span>Usually begin between 5pm-7pm. Last 2-3 hours.</span></div>
+						<div><b>Dinner:   </b><span>Usually begin between 6pm - 7pm, usually last 3 -4 hours </span></div>
 					</div>
 			</div>
 			</div>

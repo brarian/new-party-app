@@ -3,7 +3,6 @@ import React from 'react';
 import { Route } from 'react-router-dom'; 
 import questionsList from './dummy-data';
 import DateComponent from './date';
-// import Moment from 'react-moment';
 import Theme from './theme';
 import Type, { SpecQuestion } from './type';
 import Menu from './menu';
@@ -86,7 +85,6 @@ class NewParty extends React.Component {
 		});
 		if(this.state.number === 6){
 			this.props.submitAnswers(this.state);
-			// this.props.history.push('/profile');
 		}
 	}
 
@@ -110,11 +108,6 @@ return (
 						<div> 
 								<br />
 								<input type="submit" value="Submit" />
-								{/* <div className="button">
-                    				<Link  to={`/new-party/question-1`}>Next</Link>
-									<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns signUpButton button large"><Link  to={`/new-party/question-1`}>Next</Link></button>
-
-                  				</div>	 */}
 						</div>}/>
 						
 			{questionsList.map((question, index)=> {
@@ -122,7 +115,7 @@ return (
 					return (<div key={index}>   
 							<Question index={index} question={question} onChange={props.onChange}/>
 							<br />
-								<button className="small-4 small-offset-4 medium-2 medium-offset-5 columns nextButton button large" onClick={props.handleButtonClick}>{props.number !== 6? "Next": "Submit Answers"} </button>
+								<button className="small-12 medium-12 columns nextButton button large" onClick={props.handleButtonClick}>{props.number !== 6? "Next": "Create Party"} </button>
 						</div>)
 						}
 						return null
@@ -145,10 +138,6 @@ return (
 			{props.index === 4? <div><GuestListForm title={props.question.title} handleChange={props.onChange}/></div>: " "}
 			{props.index === 5? <div><Name title={props.question.title} handleChange={props.onChange}/></div>: " "} 
 			{props.index === 6? <div><Menu title={props.question.title} handleChange={props.onChange} /></div>: " "}
-			{/* link to the profile */}
-			{/* {props.index > 6 ? <div><Profile /></div>:"" } */}
-
-			
 		</label>
 	</div>
 )

@@ -40,13 +40,12 @@ class Theme extends React.Component {
 			 </div>
 			 <div className="small-12 medium-3 columns aside">
 			 <div className="tipTitle"> On Themes</div>
-			 When planning your party, it helps to choose a theme. 
-			 This doesn't mean all your guests have to show up dressed 
-			 like pirates or their favorite movie stars—a theme can 
-			 be discreet, such as a flavor or color that is present 
+			 When planning your party, it might help you to choose a theme. 
+			 This doesn't mean an elaborate costume party, it can be as simple as flavor or color that is present 
 			 throughout the entire evening. A creative theme can make your party 
 			 feel special without adding to your budget, and it will help you come up 
-			 with ideas for food, drinks, and decorations.
+			 with ideas for food, drinks, and decorations. 
+			However you don't have to have a theme to have a great party.
 			</div>
 			</div>
 			</div>

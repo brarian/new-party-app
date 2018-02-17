@@ -6,6 +6,7 @@ import {
 import ReactContainer from './route-container';
 import configureStore from './store';
 import { Provider } from 'react-redux';
+import Footer from './components/footer';
 
 const initialState = {};
 
@@ -18,6 +19,7 @@ class App extends Component {
           <div>
           <NavigationBar />
           <ReactContainer />
+          <Footer />
           </div>
         </Router>
       </Provider>

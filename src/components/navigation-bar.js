@@ -50,7 +50,7 @@ else
             <ul className="dropdown menu" data-dropdown-menu>
             <li><Link to="/about">About </Link></li>
             <li><Link to="/newUser">New User</Link></li>
-            <li> <Link to="/logIn">log In </Link></li>
+            <li> <Link to="/logIn">Log In </Link></li>
             </ul>
           </div>
         </div>

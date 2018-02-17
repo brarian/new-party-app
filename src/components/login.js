@@ -18,7 +18,6 @@ class Login extends React.Component {
     }
   }
   componentWillReceiveProps(nextProps){
-    console.log(nextProps);
     if(nextProps.token || this.props.token){
         this.props.history.push('/new-party')   
     } else {
