@@ -1,14 +1,12 @@
 /*eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import React from 'react';
-import cheers from '../images/cheers.jpg';
 import balloon from '../images/balloon.png';
 import pencil from '../images/pencil.png';
 import execute from '../images/execute.png';
 import brunch from '../images/brunch.jpg';
 
 class LandingPage extends React.Component {
-
 
 	render() {
 		return (

@@ -58,14 +58,14 @@ class NewParty extends React.Component {
 	handleButtonClick(e){
 		const fields = ["type", "theme", "date","time", "bigGuestList", "name", "menu"]
 		if(!this.state[fields[this.state.number]]){
-			alert("dont't be lazy please input this field");
+			alert("Please answer this question!");
 			return null
 		}
 		if(this.state.number === 6){
 			const menuFields = ["protien", "bread", "salad", "side"];
 			menuFields.forEach((field)=> {
 				if(!this.state.menu[field]){
-					alert("dont't be lazy please input this field");
+					alert("Please answer this question!");
 					throw null;
 				}
 			})

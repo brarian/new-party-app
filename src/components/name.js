@@ -13,7 +13,7 @@ class Name extends React.Component {
 			<div className="small-12 medium-3 columns aside">
 				<div className="tipTitle"> A Quick Note! </div>
 				If you'll be serving alcohol at your party use this link to estimate how much to buy: 
-				<a href="https://www.evite.com/pages/party/drink-calculator"> Alcohol Calculator </a>
+				<a href="https://www.evite.com/pages/party/drink-calculator" target="_blank" rel="noopener noreferrer"> Alcohol Calculator </a>
 				<br />
 				
 			</div>
