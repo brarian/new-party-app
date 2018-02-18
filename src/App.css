@@ -8190,6 +8190,15 @@ textarea {
 body {
   background-color: #f4f3f0; }
 
+.footer {
+  margin-top: 200px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: slategrey;
+  text-align: center; }
+
 .userRegInput {
   text-align: center;
   background-color: #c5cbe3;
@@ -8392,7 +8401,8 @@ p {
   display: inline-block; }
 
 .switch.small {
-  display: inline; }
+  display: inline;
+  margin-left: 5px; }
 
 .userRegInput {
   text-align: center;
@@ -8423,6 +8433,10 @@ p {
 
 .left {
   text-align: left; }
+
+.partylist {
+  text-align: left;
+  margin-left: 20px; }
 
 .tipTitle a {
   color: black;
