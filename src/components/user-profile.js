@@ -49,7 +49,7 @@ class Profile extends React.Component {
 									<div key={index} className="userRegInput medium-10">
 										<div className="partylist"> 
 											<div> <strong>Party Name:</strong> {party.name} </div>
-											<div> <strong>Party Name:</strong> {party.theme} </div>
+											<div> <strong>Party Theme:</strong> {party.theme} </div>
 											<div> <strong>Party Date:</strong> {party.date}</div>
 											<div> <strong>Party Time:</strong> {party.time}</div>
 											<div> <strong>Party Menu: </strong> </div>
