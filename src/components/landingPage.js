@@ -19,7 +19,7 @@ class LandingPage extends React.Component {
 		party planning made easy
 	</div>
 	<div >
-		<button className="small-12 medium-12 signUpButton button large"> <Link to="/newUser">Join Us!</Link></button>
+		<button className="small-12 medium-12 signUpButton button large"> <Link to="/newUser">Join Us! Credentials located on the Log In page for a Demo Account!</Link></button>
 	</div>
 	<div>
 	<div  className="heading">How Little Mixer Works </div>
