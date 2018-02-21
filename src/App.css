@@ -8150,7 +8150,8 @@ textarea {
 .top-bar {
   background-color: slategrey;
   padding: 5px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  margin-bottom: 0; }
   .top-bar .top-bar ul {
     background-color: slategrey; }
 
@@ -8173,7 +8174,8 @@ textarea {
     background-color: slategrey;
     text-align: center; }
   .top-bar {
-    background-color: slategrey; } }
+    background-color: slategrey;
+    margin-bottom: 0; } }
 
 .button {
   color: black;

@@ -43,8 +43,9 @@ handleChange(e){
           <div className="tipTitle"> group dynamics </div>
             <div>Your guests don't need to know each other,
               but they should be able to socialize in a group. 
-              Be cognizant of how many people you invite, 
-              a bigger party isn't necessarily always better. 
+              Be cognizant of the number of people you invite; a bigger party isn’t necessarily a better party
+
+
               <br />
               Expect 75% of your guest list to show up if they are close
               friends and 60% to show up if they aren't as close to you.  
