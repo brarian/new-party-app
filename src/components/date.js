@@ -20,9 +20,8 @@ class Date extends React.Component {
 			Try to pick a date at least 2 - 3 weeks in the future to give yourself time to get ready. 
 			Make sure to pick a date when most of your guests are free. 
 			Do you know of another party happening
-			or a community event or holiday that has everyone booked?
-			You may have to do some asking around beforehand to 
-			figure out if this is the case.
+			or event has everyone booked?
+			You may have to do some asking around but it's worth it to ensure you have a gret party. 
 			</div>
 			</div>
 		</div>

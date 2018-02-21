@@ -51,14 +51,14 @@ class Status extends React.Component {
 				<div className="small-12 medium-8 columns statusInput">
                     <h2>One Week Before</h2>
                     <div className="switch ">
-                        <div>Gather all the RSVPs you've recieved and finalize your guest list. 
+                        <div>Gather all the RSVP's you've recieved and finalize your guest list. 
                             <Switch input={{name:"rsvp", defaultChecked: this.props.party.statusUpdate.rsvp}} size={"small"} active={{ text: 'Yes' }} inactive={{ text: 'No' }} onChange={this.onChange}/>
                         </div>
                     </div>
          
                     <div className="switch">
-                        Take inventory of the tableware, cookware, and serving dishes you will need, sure you have it. 
-                        <br /> If you don't have something, borrow it! 
+                        Take inventory of the tableware, cookware, and serving dishes you will need, make sure you have it. 
+                        <br /> If you don't have something at this point, borrow it! 
                         <Switch input={{name: "inventory", defaultChecked:  this.props.party.statusUpdate.inventory}} size={"small"} active={{ text: 'Yes' }} inactive={{ text: 'No' }} onChange={this.onChange}/>
                     </div>
 
@@ -114,10 +114,10 @@ class Status extends React.Component {
                 <div className="row">
 				<div className="small-12 medium-8 medium-offset-2 columns statusInput">
                     <h2>One Hour Before</h2>
-                    <div className="switch">Set alcohol, plates and ice out, if your guests are making their own drinks.
+                    <div className="switch">Set alcohol, glassware, and ice out if your guests are making their own drinks.
                         <Switch input={{name: "drinks", defaultChecked:  this.props.party.statusUpdate.drinks}} size={"small"} active={{ text: 'Yes' }} inactive={{ text: 'No' }} onChange={this.onChange}/>
                     </div>
-                    <div className="switch">Light Candles and set up flowers
+                    <div className="switch">Light candles and set up flowers.
                         <Switch input={{name: "candles", defaultChecked:  this.props.party.statusUpdate.candles}} size={"small"} active={{ text: 'Yes' }} inactive={{ text: 'No' }} onChange={this.onChange}/>
                     </div>
                     <div className="switch"> Get dressed and set out appetizers for guests last! 

@@ -51,8 +51,8 @@ render() {
 		</div>
 		<div className="small-12 medium-3 columns aside">
 			<div className="tipTitle"> general time guide</div>
-			<div><b>Cocktail Party: </b><span>The average cocktail party lasts 2-3 hours during which guests snack on a simple spread of food and imbibe on great cocktails while chatting with other guests. </span></div>
-			<div><b>Dinner Party:   </b><span> a party of people assembled to have dinner together </span></div>
+			<div><b>Cocktail Party: </b><span>The average cocktail party lasts 2-3 hours during which guests snack on a simple spread of food and imbibe in refreshing cocktails while chatting with other guests. </span></div>
+			<div><b>Dinner Party:   </b><span> A party of people assembled to dine together. </span></div>
 		</div>
 		</div>
 
